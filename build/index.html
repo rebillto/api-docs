@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>SURCO - API Reference</title>
+    <title>Rebill - API Reference</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -305,26 +305,26 @@
           </li>
       </div>
         <ul class="toc-footer">
-            <li><a href='mailto:developers@surcoseguros.com.ar?subject=Solicitud de API Key&body=Hola, mi nombre es _____________ y solicito una API Key para desarrollar ________________________________________ para la empresa _______________ radicada en ____________________ . Mi email de contacto es __________________ y telefono __________________ .'>Request a Developer Key</a></li>
+            <li><a href='mailto:developers@rebill.to?subject=Solicitud de API Key&body=Hola, mi nombre es _____________ y solicito una API Key para desarrollar ________________________________________ para la empresa _______________ radicada en ____________________ . Mi email de contacto es __________________ y telefono __________________ .'>Request a Developer Key</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the SURCO API. You can use our API to access SURCO API endpoints, which can get information on subscriptions, payment processing, and updated Plans Pricing. Also, you can process payments through the MercadoPago Basic Checkout.</p>
+<p>Welcome to the Rebill API. You can use our API to access Rebill API endpoints, which can get information on subscriptions, payment processing, and updated Plans Pricing. Also, you can process payments through the MercadoPago Basic Checkout.</p>
 
 <p>We have language bindings in Curl, Ruby, Python, and Javascript. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
 
-<p>SURCO uses JWT to allow access to the API. You can access to the APIs using your own personal account, and asking for special access to the other functionalities <a href="mailto:developers@surcoseguros.com.ar?subject=Solicitud%20de%20API%20Key&amp;body=Hola,%20mi%20nombre%20es%20_____________%20y%20solicito%20una%20API%20Key%20para%20desarrollar%20________________________________________%20para%20la%20empresa%20_______________%20radicada%20en%20____________________%20.%20Mi%20email%20de%20contacto%20es%20__________________%20y%20telefono%20__________________%20.">by email</a>.</p>
+<p>Rebill uses JWT to allow access to the API. You can access to the APIs using your own personal account, and asking for special access to the other functionalities <a href="mailto:developers@rebill.to?subject=Solicitud%20de%20API%20Key&amp;body=Hola,%20mi%20nombre%20es%20_____________%20y%20solicito%20una%20API%20Key%20para%20desarrollar%20________________________________________%20para%20la%20empresa%20_______________%20radicada%20en%20____________________%20.%20Mi%20email%20de%20contacto%20es%20__________________%20y%20telefono%20__________________%20.">by email</a>.</p>
 
-<p>Looking for any specific Endpoint? Write us with your request to <a href="mailto:developers@surcoseguros.com.ar">developers@surcoseguros.com.ar</a>.</p>
+<p>Looking for any specific Endpoint? Write us with your request to <a href="mailto:developers@rebill.to">developers@rebill.to</a>.</p>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl --request GET <span class="se">\</span>
-  --url <span class="s1">'https://api.surcoseguros.com.ar/v1/getToken'</span> <span class="se">\</span>
+  --url <span class="s1">'https://api.rebill.to/v1/getToken'</span> <span class="se">\</span>
   --header <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> <span class="se">\</span>
   --header <span class="s1">'email: you@domain.com'</span> <span class="se">\</span>
   --header <span class="s1">'password: your-passw0rd'</span>
@@ -333,7 +333,7 @@
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
   <span class="s2">"hostname"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">"https://api.surcoseguros.com.ar"</span>
+    <span class="s2">"https://api.rebill.to"</span>
   <span class="p">],</span>
   <span class="s2">"path"</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">"v1"</span><span class="p">,</span>
@@ -363,7 +363,7 @@
 </code></pre><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.surcoseguros.com.ar/v1/getToken"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.rebill.to/v1/getToken"</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
 
@@ -376,7 +376,7 @@
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.surcoseguros.com.ar/v1/getToken"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.rebill.to/v1/getToken"</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">"application/x-www-form-urlencoded"</span><span class="p">,</span>
@@ -392,7 +392,7 @@
 <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.surcoseguros.com.ar/v1/getToken"</span><span class="p">,</span>
+  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.rebill.to/v1/getToken"</span><span class="p">,</span>
   <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span>
   <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
@@ -426,7 +426,7 @@
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
 
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.surcoseguros.com.ar/v1/getToken"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.rebill.to/v1/getToken"</span><span class="x">
 
     </span><span class="n">req</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span><span class="x"> </span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="no">nil</span><span class="p">)</span><span class="x">
 
@@ -448,7 +448,7 @@
 
 <p>HTTP Request:</p>
 
-<p><code>GET https://api.surcoseguros.com.ar/v1/getToken</code></p>
+<p><code>GET https://api.rebill.to/v1/getToken</code></p>
 
 <table><thead>
 <tr>
@@ -470,11 +470,11 @@
 </tr>
 </tbody></table>
 <h1 id='checkout'>Checkout</h1><h2 id='basic-checkout'>Basic Checkout</h2><pre class="highlight shell tab-shell"><code>curl --request POST <span class="se">\</span>
-  --url <span class="s1">'https://api.surcoseguros.com.ar/v1/checkout/basic'</span> <span class="se">\</span>
+  --url <span class="s1">'https://api.rebill.to/v1/checkout/basic'</span> <span class="se">\</span>
   --header <span class="s1">'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkUzBCUk5TcWdBUTVDODVwa1cuSVpQZVZQeW95dWUxbDNQeko4MjVjcGRkVjMuOWxrT052ajYifQ.rD9kYRH6Q7VKYAuvxl0VL0b1JQwLMaDHArntRoVugrc'</span> <span class="se">\</span>
   --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   --data <span class="s1">'{
-    "callbackURL":"http://www.surcoseguros.com.ar",
+    "callbackURL":"http://www.rebill.to",
     "planID":3,
     "start_date":"1/04/2018",
     "customerData": {
@@ -492,7 +492,7 @@
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
   <span class="s2">"hostname"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">"https://api.surcoseguros.com.ar"</span>
+    <span class="s2">"https://api.rebill.to"</span>
   <span class="p">],</span>
   <span class="s2">"path"</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">"v1"</span><span class="p">,</span>
@@ -518,7 +518,7 @@
   <span class="p">});</span>
 <span class="p">});</span>
 
-<span class="nx">req</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span> <span class="na">callbackURL</span><span class="p">:</span> <span class="s1">'http://www.surcoseguros.com.ar'</span><span class="p">,</span>
+<span class="nx">req</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span> <span class="na">callbackURL</span><span class="p">:</span> <span class="s1">'http://www.rebill.to'</span><span class="p">,</span>
   <span class="na">planID</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
   <span class="na">start_date</span><span class="p">:</span> <span class="s1">'1/04/2018'</span><span class="p">,</span>
   <span class="na">customerData</span><span class="p">:</span> <span class="p">{</span> <span class="na">email</span><span class="p">:</span> <span class="s1">'you@domain.com'</span> <span class="p">},</span>
@@ -531,22 +531,22 @@
 </code></pre><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.surcoseguros.com.ar/v1/checkout/basic"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.rebill.to/v1/checkout/basic"</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
 
 <span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Post</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="n">request</span><span class="p">[</span><span class="s2">"Authorization"</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkUzBCUk5TcWdBUTVDODVwa1cuSVpQZVZQeW95dWUxbDNQeko4MjVjcGRkVjMuOWxrT052ajYifQ.rD9kYRH6Q7VKYAuvxl0VL0b1JQwLMaDHArntRoVugrc'</span>
 <span class="n">request</span><span class="p">[</span><span class="s2">"Content-Type"</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'application/json'</span>
-<span class="n">request</span><span class="p">.</span><span class="nf">body</span> <span class="o">=</span> <span class="s2">"{</span><span class="se">\n\t\"</span><span class="s2">callbackURL</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">http://www.surcoseguros.com.ar</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\"</span><span class="s2">planID</span><span class="se">\"</span><span class="s2">:3,</span><span class="se">\n\t\"</span><span class="s2">start_date</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">1/04/2018</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\"</span><span class="s2">customerData</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\n\t\t\"</span><span class="s2">email</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">you@domain.com</span><span class="se">\"\n\t</span><span class="s2">},</span><span class="se">\n\t\"</span><span class="s2">extra</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\n\t\t\"</span><span class="s2">phone_brand</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">samsung</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\t\"</span><span class="s2">phone_model</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">s8</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\t\"</span><span class="s2">phone_IMEI</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">1298319230198209487378377</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\t\"</span><span class="s2">phone_POS</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">sample_location</span><span class="se">\"\n\t</span><span class="s2">}</span><span class="se">\n</span><span class="s2">}"</span>
+<span class="n">request</span><span class="p">.</span><span class="nf">body</span> <span class="o">=</span> <span class="s2">"{</span><span class="se">\n\t\"</span><span class="s2">callbackURL</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">http://www.rebill.to</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\"</span><span class="s2">planID</span><span class="se">\"</span><span class="s2">:3,</span><span class="se">\n\t\"</span><span class="s2">start_date</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">1/04/2018</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\"</span><span class="s2">customerData</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\n\t\t\"</span><span class="s2">email</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">you@domain.com</span><span class="se">\"\n\t</span><span class="s2">},</span><span class="se">\n\t\"</span><span class="s2">extra</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\n\t\t\"</span><span class="s2">phone_brand</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">samsung</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\t\"</span><span class="s2">phone_model</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">s8</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\t\"</span><span class="s2">phone_IMEI</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">1298319230198209487378377</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\t\"</span><span class="s2">phone_POS</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">sample_location</span><span class="se">\"\n\t</span><span class="s2">}</span><span class="se">\n</span><span class="s2">}"</span>
 
 <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.surcoseguros.com.ar/v1/checkout/basic"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.rebill.to/v1/checkout/basic"</span>
 
-<span class="n">payload</span> <span class="o">=</span> <span class="s">"{</span><span class="se">\n\t\"</span><span class="s">callbackURL</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">http://www.surcoseguros.com.ar</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\"</span><span class="s">planID</span><span class="se">\"</span><span class="s">:3,</span><span class="se">\n\t\"</span><span class="s">start_date</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">1/04/2018</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\"</span><span class="s">customerData</span><span class="se">\"</span><span class="s">: {</span><span class="se">\n\t\t\"</span><span class="s">email</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">you@domain.com</span><span class="se">\"\n\t</span><span class="s">},</span><span class="se">\n\t\"</span><span class="s">extra</span><span class="se">\"</span><span class="s">: {</span><span class="se">\n\t\t\"</span><span class="s">phone_brand</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">samsung</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\t\"</span><span class="s">phone_model</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">s8</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\t\"</span><span class="s">phone_IMEI</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">1298319230198209487378377</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\t\"</span><span class="s">phone_POS</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">sample_location</span><span class="se">\"\n\t</span><span class="s">}</span><span class="se">\n</span><span class="s">}"</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="s">"{</span><span class="se">\n\t\"</span><span class="s">callbackURL</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">http://www.rebill.to</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\"</span><span class="s">planID</span><span class="se">\"</span><span class="s">:3,</span><span class="se">\n\t\"</span><span class="s">start_date</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">1/04/2018</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\"</span><span class="s">customerData</span><span class="se">\"</span><span class="s">: {</span><span class="se">\n\t\t\"</span><span class="s">email</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">you@domain.com</span><span class="se">\"\n\t</span><span class="s">},</span><span class="se">\n\t\"</span><span class="s">extra</span><span class="se">\"</span><span class="s">: {</span><span class="se">\n\t\t\"</span><span class="s">phone_brand</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">samsung</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\t\"</span><span class="s">phone_model</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">s8</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\t\"</span><span class="s">phone_IMEI</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">1298319230198209487378377</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\t\"</span><span class="s">phone_POS</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">sample_location</span><span class="se">\"\n\t</span><span class="s">}</span><span class="se">\n</span><span class="s">}"</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s">'Authorization'</span><span class="p">:</span> <span class="s">"JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkUzBCUk5TcWdBUTVDODVwa1cuSVpQZVZQeW95dWUxbDNQeko4MjVjcGRkVjMuOWxrT052ajYifQ.rD9kYRH6Q7VKYAuvxl0VL0b1JQwLMaDHArntRoVugrc"</span><span class="p">,</span>
     <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">"application/json"</span>
@@ -560,14 +560,14 @@
 <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.surcoseguros.com.ar/v1/checkout/basic"</span><span class="p">,</span>
+  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.rebill.to/v1/checkout/basic"</span><span class="p">,</span>
   <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span>
   <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
   <span class="nx">CURLOPT_TIMEOUT</span> <span class="o">=&gt;</span> <span class="mi">30</span><span class="p">,</span>
   <span class="nx">CURLOPT_HTTP_VERSION</span> <span class="o">=&gt;</span> <span class="nx">CURL_HTTP_VERSION_1_1</span><span class="p">,</span>
   <span class="nx">CURLOPT_CUSTOMREQUEST</span> <span class="o">=&gt;</span> <span class="s2">"POST"</span><span class="p">,</span>
-  <span class="nx">CURLOPT_POSTFIELDS</span> <span class="o">=&gt;</span> <span class="s2">"{\n</span><span class="se">\t\"</span><span class="s2">callbackURL</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">http://www.surcoseguros.com.ar</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\"</span><span class="s2">planID</span><span class="se">\"</span><span class="s2">:3,</span><span class="se">\n\t\"</span><span class="s2">start_date</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">1/04/2018</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\"</span><span class="s2">customerData</span><span class="se">\"</span><span class="s2">: </span><span class="si">{</span><span class="nv">\n\t\t\"email\":\"you@domain.com\"\n\t</span><span class="si">}</span><span class="s2">,</span><span class="se">\n\t\"</span><span class="s2">extra</span><span class="se">\"</span><span class="s2">: {\n</span><span class="se">\t\t\"</span><span class="s2">phone_brand</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">samsung</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\t\"</span><span class="s2">phone_model</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">s8</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\t\"</span><span class="s2">phone_IMEI</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">1298319230198209487378377</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\t\"</span><span class="s2">phone_POS</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">sample_location</span><span class="se">\"\n\t</span><span class="s2">}</span><span class="se">\n</span><span class="s2">}"</span><span class="p">,</span>
+  <span class="nx">CURLOPT_POSTFIELDS</span> <span class="o">=&gt;</span> <span class="s2">"{\n</span><span class="se">\t\"</span><span class="s2">callbackURL</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">http://www.rebill.to</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\"</span><span class="s2">planID</span><span class="se">\"</span><span class="s2">:3,</span><span class="se">\n\t\"</span><span class="s2">start_date</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">1/04/2018</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\"</span><span class="s2">customerData</span><span class="se">\"</span><span class="s2">: </span><span class="si">{</span><span class="nv">\n\t\t\"email\":\"you@domain.com\"\n\t</span><span class="si">}</span><span class="s2">,</span><span class="se">\n\t\"</span><span class="s2">extra</span><span class="se">\"</span><span class="s2">: {\n</span><span class="se">\t\t\"</span><span class="s2">phone_brand</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">samsung</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\t\"</span><span class="s2">phone_model</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">s8</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\t\"</span><span class="s2">phone_IMEI</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">1298319230198209487378377</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n\t\t\"</span><span class="s2">phone_POS</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">sample_location</span><span class="se">\"\n\t</span><span class="s2">}</span><span class="se">\n</span><span class="s2">}"</span><span class="p">,</span>
   <span class="nx">CURLOPT_HTTPHEADER</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
     <span class="s2">"Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkUzBCUk5TcWdBUTVDODVwa1cuSVpQZVZQeW95dWUxbDNQeko4MjVjcGRkVjMuOWxrT052ajYifQ.rD9kYRH6Q7VKYAuvxl0VL0b1JQwLMaDHArntRoVugrc"</span><span class="p">,</span>
     <span class="s2">"Content-Type: application/json"</span>
@@ -595,9 +595,9 @@
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
 
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.surcoseguros.com.ar/v1/checkout/basic"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.rebill.to/v1/checkout/basic"</span><span class="x">
 
-    </span><span class="n">payload</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">strings</span><span class="o">.</span><span class="n">NewReader</span><span class="p">(</span><span class="s">"{</span><span class="se">\n\t\"</span><span class="s">callbackURL</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">http://www.surcoseguros.com.ar</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\"</span><span class="s">planID</span><span class="se">\"</span><span class="s">:3,</span><span class="se">\n\t\"</span><span class="s">start_date</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">1/04/2018</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\"</span><span class="s">customerData</span><span class="se">\"</span><span class="s">: {</span><span class="se">\n\t\t\"</span><span class="s">email</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">you@domain.com</span><span class="se">\"\n\t</span><span class="s">},</span><span class="se">\n\t\"</span><span class="s">extra</span><span class="se">\"</span><span class="s">: {</span><span class="se">\n\t\t\"</span><span class="s">phone_brand</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">samsung</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\t\"</span><span class="s">phone_model</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">s8</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\t\"</span><span class="s">phone_IMEI</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">1298319230198209487378377</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\t\"</span><span class="s">phone_POS</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">sample_location</span><span class="se">\"\n\t</span><span class="s">}</span><span class="se">\n</span><span class="s">}"</span><span class="p">)</span><span class="x">
+    </span><span class="n">payload</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">strings</span><span class="o">.</span><span class="n">NewReader</span><span class="p">(</span><span class="s">"{</span><span class="se">\n\t\"</span><span class="s">callbackURL</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">http://www.rebill.to</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\"</span><span class="s">planID</span><span class="se">\"</span><span class="s">:3,</span><span class="se">\n\t\"</span><span class="s">start_date</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">1/04/2018</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\"</span><span class="s">customerData</span><span class="se">\"</span><span class="s">: {</span><span class="se">\n\t\t\"</span><span class="s">email</span><span class="se">\"</span><span class="s">:</span><span class="se">\"</span><span class="s">you@domain.com</span><span class="se">\"\n\t</span><span class="s">},</span><span class="se">\n\t\"</span><span class="s">extra</span><span class="se">\"</span><span class="s">: {</span><span class="se">\n\t\t\"</span><span class="s">phone_brand</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">samsung</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\t\"</span><span class="s">phone_model</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">s8</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\t\"</span><span class="s">phone_IMEI</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">1298319230198209487378377</span><span class="se">\"</span><span class="s">,</span><span class="se">\n\t\t\"</span><span class="s">phone_POS</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">sample_location</span><span class="se">\"\n\t</span><span class="s">}</span><span class="se">\n</span><span class="s">}"</span><span class="p">)</span><span class="x">
 
     </span><span class="n">req</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"POST"</span><span class="p">,</span><span class="x"> </span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="n">payload</span><span class="p">)</span><span class="x">
 
@@ -614,7 +614,7 @@
 
 </span><span class="p">}</span><span class="x">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"callbackURL"</span><span class="p">:</span><span class="s2">"http://www.surcoseguros.com.ar"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"callbackURL"</span><span class="p">:</span><span class="s2">"http://www.rebill.to"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"planID"</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="w">
     </span><span class="s2">"start_date"</span><span class="p">:</span><span class="s2">"1/04/2018"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"customerData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -631,7 +631,7 @@
 <p>Basic Checkout uses MercadoPago to process the payment. After sending the required JSON as stated, you will get a response with the init_point that shall be used to process the payment.
 After the payment is processed, the customer will be returned to the <code>callbackURL</code> defined before. You can customize the <code>callbackURL</code> to redirect to any Thank You page in your system.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>POST https://api.surcoseguros.com.ar/v1/checkout/basic</code></p>
+<p><code>POST https://api.rebill.to/v1/checkout/basic</code></p>
 
 <p>The request shall be sent in JSON Format.</p>
 
@@ -681,14 +681,14 @@ After the payment is processed, the customer will be returned to the <code>callb
 <h1 id='customers'>Customers</h1>
 <p>A customer is each paying individual, this object is created on each successful checkout automatically.</p>
 <h2 id='get-all-customers'>Get All Customers</h2><pre class="highlight shell tab-shell"><code>curl --request GET <span class="se">\</span>
-  --url <span class="s1">'https://api.surcoseguros.com.ar/v1/customers/all'</span> <span class="se">\</span>
+  --url <span class="s1">'https://api.rebill.to/v1/customers/all'</span> <span class="se">\</span>
   --header <span class="s1">'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"http"</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
   <span class="s2">"hostname"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">"https://api.surcoseguros.com.ar"</span>
+    <span class="s2">"https://api.rebill.to"</span>
   <span class="p">],</span>
   <span class="s2">"path"</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">"v1"</span><span class="p">,</span>
@@ -717,7 +717,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </code></pre><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.surcoseguros.com.ar/v1/customers/all"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.rebill.to/v1/customers/all"</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
 
@@ -728,7 +728,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.surcoseguros.com.ar/v1/customers/all"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.rebill.to/v1/customers/all"</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span><span class="p">}</span>
 
@@ -740,7 +740,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.surcoseguros.com.ar/v1/customers/all"</span><span class="p">,</span>
+  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.rebill.to/v1/customers/all"</span><span class="p">,</span>
   <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span>
   <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
@@ -772,7 +772,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
 
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.surcoseguros.com.ar/v1/customers/all"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.rebill.to/v1/customers/all"</span><span class="x">
 
     </span><span class="n">req</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span><span class="x"> </span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="no">nil</span><span class="p">)</span><span class="x">
 
@@ -790,7 +790,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </span></code></pre>
 <p>This endpoint retrieves all your customers.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://api.surcoseguros.com.ar/v1/customers/all</code></p>
+<p><code>GET https://api.rebill.to/v1/customers/all</code></p>
 
 <table><thead>
 <tr>
@@ -804,14 +804,14 @@ After the payment is processed, the customer will be returned to the <code>callb
 </tr>
 </tbody></table>
 <h2 id='get-customer-by-email'>Get Customer by Email</h2><pre class="highlight shell tab-shell"><code>curl --request GET <span class="se">\</span>
-  --url <span class="s1">'https://api.surcoseguros.com.ar/v1/customers/you@domain.com'</span> <span class="se">\</span>
+  --url <span class="s1">'https://api.rebill.to/v1/customers/you@domain.com'</span> <span class="se">\</span>
   --header <span class="s1">'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"http"</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
   <span class="s2">"hostname"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">"https://api.surcoseguros.com.ar"</span>
+    <span class="s2">"https://api.rebill.to"</span>
   <span class="p">],</span>
   <span class="s2">"path"</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">"v1"</span><span class="p">,</span>
@@ -840,7 +840,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </code></pre><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.surcoseguros.com.ar/v1/customers/you@domain.com"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.rebill.to/v1/customers/you@domain.com"</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
 
@@ -851,7 +851,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.surcoseguros.com.ar/v1/customers/you@domain.com"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.rebill.to/v1/customers/you@domain.com"</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span><span class="p">}</span>
 
@@ -863,7 +863,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.surcoseguros.com.ar/v1/customers/you@domain.com"</span><span class="p">,</span>
+  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.rebill.to/v1/customers/you@domain.com"</span><span class="p">,</span>
   <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span>
   <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
@@ -895,7 +895,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
 
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.surcoseguros.com.ar/v1/customers/you@domain.com"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.rebill.to/v1/customers/you@domain.com"</span><span class="x">
 
     </span><span class="n">req</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span><span class="x"> </span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="no">nil</span><span class="p">)</span><span class="x">
 
@@ -913,7 +913,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </span></code></pre>
 <p>This endpoint retrieves a specific Customer&#39;s Data using its email as Primary Key.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET https://api.surcoseguros.com.ar/v1/customers/:email</code></p>
+<p><code>GET https://api.rebill.to/v1/customers/:email</code></p>
 
 <table><thead>
 <tr>
@@ -939,7 +939,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </tr>
 </tbody></table>
 <h2 id='new-customer'>New Customer</h2><pre class="highlight shell tab-shell"><code>curl --request POST <span class="se">\</span>
-  --url <span class="s1">'https://api.surcoseguros.com.ar/v1/customers/new'</span> <span class="se">\</span>
+  --url <span class="s1">'https://api.rebill.to/v1/customers/new'</span> <span class="se">\</span>
   --header <span class="s1">'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkUzBCUk5TcWdBUTVDODVwa1cuSVpQZVZQeW95dWUxbDNQeko4MjVjcGRkVjMuOWxrT052ajYifQ.rD9kYRH6Q7VKYAuvxl0VL0b1JQwLMaDHArntRoVugrc'</span> <span class="se">\</span>
   --header <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> <span class="se">\</span>
   --data <span class="s1">'firstName=Nahuel&amp;lastName=Sample_client_lastName&amp;email=nahuel%40nahuel.xyz&amp;password=your-passw0rd&amp;role=2&amp;enabled=1&amp;company_name=sample_Some%20Company&amp;address_street=sample_address_street3&amp;address_number=00000&amp;address_floor=1&amp;address_apt=A&amp;address_city=Buenos%20Aires&amp;address_province=Buenos%20Aires&amp;zipcode=0000'</span>
@@ -949,7 +949,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
   <span class="s2">"hostname"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">"https://api.surcoseguros.com.ar"</span>
+    <span class="s2">"https://api.rebill.to"</span>
   <span class="p">],</span>
   <span class="s2">"path"</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">"v1"</span><span class="p">,</span>
@@ -993,7 +993,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </code></pre><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.surcoseguros.com.ar/v1/customers/new"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.rebill.to/v1/customers/new"</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
 
@@ -1006,7 +1006,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.surcoseguros.com.ar/v1/customers/new"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.rebill.to/v1/customers/new"</span>
 
 <span class="n">payload</span> <span class="o">=</span> <span class="s">"firstName=Nahuel&amp;lastName=Sample_client_lastName&amp;email=nahuel</span><span class="si">%40</span><span class="s">nahuel.xyz&amp;password=your-passw0rd&amp;role=2&amp;enabled=1&amp;company_name=sample_Some</span><span class="si">%20</span><span class="s">Company&amp;address_street=sample_address_street3&amp;address_number=00000&amp;address_floor=1&amp;address_apt=A&amp;address_city=Buenos</span><span class="si">%20</span><span class="s">Aires&amp;address_province=Buenos</span><span class="si">%20</span><span class="s">Aires&amp;zipcode=0000"</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
@@ -1022,7 +1022,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.surcoseguros.com.ar/v1/customers/new"</span><span class="p">,</span>
+  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.rebill.to/v1/customers/new"</span><span class="p">,</span>
   <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span>
   <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
@@ -1057,7 +1057,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
 
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.surcoseguros.com.ar/v1/customers/new"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.rebill.to/v1/customers/new"</span><span class="x">
 
     </span><span class="n">payload</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">strings</span><span class="o">.</span><span class="n">NewReader</span><span class="p">(</span><span class="s">"firstName=Nahuel&amp;lastName=Sample_client_lastName&amp;email=nahuel%40nahuel.xyz&amp;password=your-passw0rd&amp;role=2&amp;enabled=1&amp;company_name=sample_Some%20Company&amp;address_street=sample_address_street3&amp;address_number=00000&amp;address_floor=1&amp;address_apt=A&amp;address_city=Buenos%20Aires&amp;address_province=Buenos%20Aires&amp;zipcode=0000"</span><span class="p">)</span><span class="x">
 
@@ -1078,7 +1078,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </span></code></pre>
 <p>This endpoint creates or updates a customer using its <code>email</code> as Primary Key.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST https://api.surcoseguros.com.ar/v1/customers/new/</code></p>
+<p><code>POST https://api.rebill.to/v1/customers/new/</code></p>
 
 <table><thead>
 <tr>
@@ -1156,7 +1156,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </tr>
 </tbody></table>
 <h2 id='update-a-customer'>Update a Customer</h2><pre class="highlight shell tab-shell"><code>curl --request POST <span class="se">\</span>
-  --url <span class="s1">'https://api.surcoseguros.com.ar/v1/customers/update'</span> <span class="se">\</span>
+  --url <span class="s1">'https://api.rebill.to/v1/customers/update'</span> <span class="se">\</span>
   --header <span class="s1">'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTYsInBhc3N3b3JkIjoiJDJhJDEwJFMwQlJOU3FnQVE1Qzg1cGtXLklaUGVWUHlveXVlMWwzUHpKODI1Y3BkZFYzLjlsa09Odmo2In0.qUMvsLxxt3reYBcvpTJkWWyenBXOGSUXO1AG3MxBttI'</span> <span class="se">\</span>
   --header <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> <span class="se">\</span>
   --data <span class="s1">'id=24&amp;firstName=Test&amp;lastName=changed1&amp;email=sample_email3%40domain.com&amp;password=your-passw0rd&amp;role=1&amp;enabled=1&amp;company_name=Changed&amp;address_street=Changed&amp;address_number=00001Changed&amp;address_floor=1Changed&amp;address_apt=AChanged&amp;address_city=Buenos%20AiresChanged&amp;address_province=Buenos%20AiresChanged&amp;zipcode=0000Changed'</span>
@@ -1166,7 +1166,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
   <span class="s2">"hostname"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">"https://api.surcoseguros.com.ar"</span>
+    <span class="s2">"https://api.rebill.to"</span>
   <span class="p">],</span>
   <span class="s2">"path"</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">"v1"</span><span class="p">,</span>
@@ -1210,7 +1210,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </code></pre><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.surcoseguros.com.ar/v1/customers/update"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.rebill.to/v1/customers/update"</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
 
@@ -1223,7 +1223,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.surcoseguros.com.ar/v1/customers/update"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.rebill.to/v1/customers/update"</span>
 
 <span class="n">payload</span> <span class="o">=</span> <span class="s">"id=24&amp;firstName=Test&amp;lastName=changed1&amp;email=sample_email3</span><span class="si">%40</span><span class="s">domain.com&amp;password=your-passw0rd&amp;role=1&amp;enabled=1&amp;company_name=Changed&amp;address_street=Changed&amp;address_number=00001Changed&amp;address_floor=1Changed&amp;address_apt=AChanged&amp;address_city=Buenos</span><span class="si">%20</span><span class="s">AiresChanged&amp;address_province=Buenos</span><span class="si">%20</span><span class="s">AiresChanged&amp;zipcode=0000Changed"</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
@@ -1239,7 +1239,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.surcoseguros.com.ar/v1/customers/update"</span><span class="p">,</span>
+  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.rebill.to/v1/customers/update"</span><span class="p">,</span>
   <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span>
   <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
@@ -1274,7 +1274,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
 
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.surcoseguros.com.ar/v1/customers/update"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.rebill.to/v1/customers/update"</span><span class="x">
 
     </span><span class="n">payload</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">strings</span><span class="o">.</span><span class="n">NewReader</span><span class="p">(</span><span class="s">"id=24&amp;firstName=Test&amp;lastName=changed1&amp;email=sample_email3%40domain.com&amp;password=your-passw0rd&amp;role=1&amp;enabled=1&amp;company_name=Changed&amp;address_street=Changed&amp;address_number=00001Changed&amp;address_floor=1Changed&amp;address_apt=AChanged&amp;address_city=Buenos%20AiresChanged&amp;address_province=Buenos%20AiresChanged&amp;zipcode=0000Changed"</span><span class="p">)</span><span class="x">
 
@@ -1295,7 +1295,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </span></code></pre>
 <p>This endpoint creates or updates a customer using its <code>email</code> as Primary Key.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>POST https://api.surcoseguros.com.ar/v1/customers/update/</code></p>
+<p><code>POST https://api.rebill.to/v1/customers/update/</code></p>
 
 <table><thead>
 <tr>
@@ -1373,7 +1373,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </tr>
 </tbody></table>
 <h2 id='delete-a-customer'>Delete a Customer</h2><pre class="highlight shell tab-shell"><code>curl --request DELETE <span class="se">\</span>
-  --url <span class="s1">'https://api.surcoseguros.com.ar/v1/customers/delete/you@domain.com'</span> <span class="se">\</span>
+  --url <span class="s1">'https://api.rebill.to/v1/customers/delete/you@domain.com'</span> <span class="se">\</span>
   --header <span class="s1">'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span> <span class="se">\</span>
   --header <span class="s1">'Content-Type: application/json'</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"http"</span><span class="p">);</span>
@@ -1381,7 +1381,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"DELETE"</span><span class="p">,</span>
   <span class="s2">"hostname"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">"https://api.surcoseguros.com.ar"</span>
+    <span class="s2">"https://api.rebill.to"</span>
   <span class="p">],</span>
   <span class="s2">"path"</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">"v1"</span><span class="p">,</span>
@@ -1412,7 +1412,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </code></pre><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.surcoseguros.com.ar/v1/customers/delete/you@domain.com"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.rebill.to/v1/customers/delete/you@domain.com"</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
 
@@ -1424,7 +1424,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.surcoseguros.com.ar/v1/customers/delete/you@domain.com"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.rebill.to/v1/customers/delete/you@domain.com"</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">"application/json"</span><span class="p">,</span>
@@ -1439,7 +1439,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.surcoseguros.com.ar/v1/customers/delete/you@domain.com"</span><span class="p">,</span>
+  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.rebill.to/v1/customers/delete/you@domain.com"</span><span class="p">,</span>
   <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span>
   <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
@@ -1472,7 +1472,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
 
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.surcoseguros.com.ar/v1/customers/delete/you@domain.com"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.rebill.to/v1/customers/delete/you@domain.com"</span><span class="x">
 
     </span><span class="n">req</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"DELETE"</span><span class="p">,</span><span class="x"> </span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="no">nil</span><span class="p">)</span><span class="x">
 
@@ -1491,7 +1491,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </span></code></pre>
 <p>This endpoint deletes a Customer, using its email as Primary Key. Only administrators can delete a customer.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>DELETE https://api.surcoseguros.com.ar/v1/customers/delete/:email</code></p>
+<p><code>DELETE https://api.rebill.to/v1/customers/delete/:email</code></p>
 
 <table><thead>
 <tr>
@@ -1521,14 +1521,14 @@ After the payment is processed, the customer will be returned to the <code>callb
 </tr>
 </tbody></table>
 <h1 id='payments'>Payments</h1><h2 id='get-all-payments'>Get All Payments</h2><pre class="highlight shell tab-shell"><code>curl --request GET <span class="se">\</span>
-  --url <span class="s1">'https://api.surcoseguros.com.ar/v1/payments/all'</span> <span class="se">\</span>
+  --url <span class="s1">'https://api.rebill.to/v1/payments/all'</span> <span class="se">\</span>
   --header <span class="s1">'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"http"</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
   <span class="s2">"hostname"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">"https://api.surcoseguros.com.ar"</span>
+    <span class="s2">"https://api.rebill.to"</span>
   <span class="p">],</span>
   <span class="s2">"path"</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">"v1"</span><span class="p">,</span>
@@ -1557,7 +1557,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </code></pre><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.surcoseguros.com.ar/v1/payments/all"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.rebill.to/v1/payments/all"</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
 
@@ -1568,7 +1568,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.surcoseguros.com.ar/v1/payments/all"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.rebill.to/v1/payments/all"</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span><span class="p">}</span>
 
@@ -1580,7 +1580,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.surcoseguros.com.ar/v1/payments/all"</span><span class="p">,</span>
+  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.rebill.to/v1/payments/all"</span><span class="p">,</span>
   <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span>
   <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
@@ -1612,7 +1612,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
 
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.surcoseguros.com.ar/v1/payments/all"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.rebill.to/v1/payments/all"</span><span class="x">
 
     </span><span class="n">req</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span><span class="x"> </span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="no">nil</span><span class="p">)</span><span class="x">
 
@@ -1628,7 +1628,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="p">}</span><span class="x">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://api.surcoseguros.com.ar/v1/payments/all</code></p>
+<p><code>GET https://api.rebill.to/v1/payments/all</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -1642,14 +1642,14 @@ After the payment is processed, the customer will be returned to the <code>callb
 </tr>
 </tbody></table>
 <h2 id='get-a-specific-payment'>Get a Specific Payment</h2><pre class="highlight shell tab-shell"><code>curl --request GET <span class="se">\</span>
-  --url <span class="s1">'https://api.surcoseguros.com.ar/v1/payments/subscriptionID/34'</span> <span class="se">\</span>
+  --url <span class="s1">'https://api.rebill.to/v1/payments/subscriptionID/34'</span> <span class="se">\</span>
   --header <span class="s1">'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"http"</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
   <span class="s2">"hostname"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">"https://api.surcoseguros.com.ar"</span>
+    <span class="s2">"https://api.rebill.to"</span>
   <span class="p">],</span>
   <span class="s2">"path"</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">"v1"</span><span class="p">,</span>
@@ -1679,7 +1679,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </code></pre><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.surcoseguros.com.ar/v1/payments/subscriptionID/34"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.rebill.to/v1/payments/subscriptionID/34"</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
 
@@ -1690,7 +1690,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.surcoseguros.com.ar/v1/payments/subscriptionID/34"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.rebill.to/v1/payments/subscriptionID/34"</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span><span class="p">}</span>
 
@@ -1702,7 +1702,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.surcoseguros.com.ar/v1/payments/subscriptionID/34"</span><span class="p">,</span>
+  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.rebill.to/v1/payments/subscriptionID/34"</span><span class="p">,</span>
   <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span>
   <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
@@ -1734,7 +1734,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
 
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.surcoseguros.com.ar/v1/payments/subscriptionID/34"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.rebill.to/v1/payments/subscriptionID/34"</span><span class="x">
 
     </span><span class="n">req</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span><span class="x"> </span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="no">nil</span><span class="p">)</span><span class="x">
 
@@ -1750,7 +1750,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="p">}</span><span class="x">
 </span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET https://api.surcoseguros.com.ar/v1/payments/:type/:id</code></p>
+<p><code>GET https://api.rebill.to/v1/payments/:type/:id</code></p>
 
 <table><thead>
 <tr>
@@ -1780,7 +1780,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </tr>
 </tbody></table>
 <h2 id='new-payment'>New Payment</h2><pre class="highlight shell tab-shell"><code>curl --request POST <span class="se">\</span>
-  --url <span class="s1">'https://api.surcoseguros.com.ar/v1/payments/new'</span> <span class="se">\</span>
+  --url <span class="s1">'https://api.rebill.to/v1/payments/new'</span> <span class="se">\</span>
   --header <span class="s1">'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span> <span class="se">\</span>
   --header <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> <span class="se">\</span>
   --data <span class="s1">'planID=4312&amp;subscriptionID=34&amp;creation=01%2F03%2F2018&amp;debit_date=03%2F01%2F2020&amp;amount=20&amp;setup_fee=30&amp;currencyID=ARS'</span>
@@ -1790,7 +1790,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
   <span class="s2">"hostname"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">"https://api.surcoseguros.com.ar"</span>
+    <span class="s2">"https://api.rebill.to"</span>
   <span class="p">],</span>
   <span class="s2">"path"</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">"v1"</span><span class="p">,</span>
@@ -1827,7 +1827,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </code></pre><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.surcoseguros.com.ar/v1/payments/new"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.rebill.to/v1/payments/new"</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
 
@@ -1840,7 +1840,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.surcoseguros.com.ar/v1/payments/new"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.rebill.to/v1/payments/new"</span>
 
 <span class="n">payload</span> <span class="o">=</span> <span class="s">"planID=4312&amp;subscriptionID=34&amp;creation=01</span><span class="si">%2</span><span class="s">F03</span><span class="si">%2</span><span class="s">F2018&amp;debit_date=03</span><span class="si">%2</span><span class="s">F01</span><span class="si">%2</span><span class="s">F2020&amp;amount=20&amp;setup_fee=30&amp;currencyID=ARS"</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
@@ -1856,7 +1856,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.surcoseguros.com.ar/v1/payments/new"</span><span class="p">,</span>
+  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.rebill.to/v1/payments/new"</span><span class="p">,</span>
   <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span>
   <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
@@ -1891,7 +1891,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
 
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.surcoseguros.com.ar/v1/payments/new"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.rebill.to/v1/payments/new"</span><span class="x">
 
     </span><span class="n">payload</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">strings</span><span class="o">.</span><span class="n">NewReader</span><span class="p">(</span><span class="s">"planID=4312&amp;subscriptionID=34&amp;creation=01%2F03%2F2018&amp;debit_date=03%2F01%2F2020&amp;amount=20&amp;setup_fee=30&amp;currencyID=ARS"</span><span class="p">)</span><span class="x">
 
@@ -1910,7 +1910,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="p">}</span><span class="x">
 </span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST https://api.surcoseguros.com.ar/v1/payments/new</code></p>
+<p><code>POST https://api.rebill.to/v1/payments/new</code></p>
 
 <table><thead>
 <tr>
@@ -1964,7 +1964,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </tr>
 </tbody></table>
 <h2 id='update-payment'>Update Payment</h2><pre class="highlight shell tab-shell"><code>curl --request POST <span class="se">\</span>
-  --url <span class="s1">'https://api.surcoseguros.com.ar/v1/payments/update'</span> <span class="se">\</span>
+  --url <span class="s1">'https://api.rebill.to/v1/payments/update'</span> <span class="se">\</span>
   --header <span class="s1">'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span> <span class="se">\</span>
   --data <span class="s1">'id=4&amp;planID=431123123&amp;subscriptionID=34123123&amp;creation=01%2F03%2F2018&amp;debit_date=03%2F01%2F2020&amp;amount=20&amp;setup_fee=300&amp;currencyID=ARS'</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">qs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"querystring"</span><span class="p">);</span>
@@ -1973,7 +1973,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
   <span class="s2">"hostname"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">"https://api.surcoseguros.com.ar"</span>
+    <span class="s2">"https://api.rebill.to"</span>
   <span class="p">],</span>
   <span class="s2">"path"</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">"v1"</span><span class="p">,</span>
@@ -2010,7 +2010,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </code></pre><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.surcoseguros.com.ar/v1/payments/update"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.rebill.to/v1/payments/update"</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
 
@@ -2022,7 +2022,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.surcoseguros.com.ar/v1/payments/update"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.rebill.to/v1/payments/update"</span>
 
 <span class="n">payload</span> <span class="o">=</span> <span class="s">"id=4&amp;planID=431123123&amp;subscriptionID=34123123&amp;creation=01</span><span class="si">%2</span><span class="s">F03</span><span class="si">%2</span><span class="s">F2018&amp;debit_date=03</span><span class="si">%2</span><span class="s">F01</span><span class="si">%2</span><span class="s">F2020&amp;amount=20&amp;setup_fee=300&amp;currencyID=ARS"</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span><span class="p">}</span>
@@ -2035,7 +2035,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.surcoseguros.com.ar/v1/payments/update"</span><span class="p">,</span>
+  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.rebill.to/v1/payments/update"</span><span class="p">,</span>
   <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span>
   <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
@@ -2069,7 +2069,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
 
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.surcoseguros.com.ar/v1/payments/update"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.rebill.to/v1/payments/update"</span><span class="x">
 
     </span><span class="n">payload</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">strings</span><span class="o">.</span><span class="n">NewReader</span><span class="p">(</span><span class="s">"id=4&amp;planID=431123123&amp;subscriptionID=34123123&amp;creation=01%2F03%2F2018&amp;debit_date=03%2F01%2F2020&amp;amount=20&amp;setup_fee=300&amp;currencyID=ARS"</span><span class="p">)</span><span class="x">
 
@@ -2087,7 +2087,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="p">}</span><span class="x">
 </span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
-<p><code>POST https://api.surcoseguros.com.ar/v1/payments/update</code></p>
+<p><code>POST https://api.rebill.to/v1/payments/update</code></p>
 
 <table><thead>
 <tr>
@@ -2141,7 +2141,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </tr>
 </tbody></table>
 <h2 id='delete-payment'>Delete Payment</h2><pre class="highlight shell tab-shell"><code>curl --request DELETE <span class="se">\</span>
-  --url <span class="s1">'https://api.surcoseguros.com.ar/v1/payments/delete/subscriptionID/34'</span> <span class="se">\</span>
+  --url <span class="s1">'https://api.rebill.to/v1/payments/delete/subscriptionID/34'</span> <span class="se">\</span>
   --header <span class="s1">'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkUzBCUk5TcWdBUTVDODVwa1cuSVpQZVZQeW95dWUxbDNQeko4MjVjcGRkVjMuOWxrT052ajYifQ.rD9kYRH6Q7VKYAuvxl0VL0b1JQwLMaDHArntRoVugrc'</span> <span class="se">\</span>
   --header <span class="s1">'Content-Type: application/json'</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"http"</span><span class="p">);</span>
@@ -2149,7 +2149,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"DELETE"</span><span class="p">,</span>
   <span class="s2">"hostname"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">"https://api.surcoseguros.com.ar"</span>
+    <span class="s2">"https://api.rebill.to"</span>
   <span class="p">],</span>
   <span class="s2">"path"</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">"v1"</span><span class="p">,</span>
@@ -2181,7 +2181,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </code></pre><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.surcoseguros.com.ar/v1/payments/delete/subscriptionID/34"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.rebill.to/v1/payments/delete/subscriptionID/34"</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
 
@@ -2193,7 +2193,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.surcoseguros.com.ar/v1/payments/delete/subscriptionID/34"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.rebill.to/v1/payments/delete/subscriptionID/34"</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">"application/json"</span><span class="p">,</span>
@@ -2208,7 +2208,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.surcoseguros.com.ar/v1/payments/delete/subscriptionID/34"</span><span class="p">,</span>
+  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.rebill.to/v1/payments/delete/subscriptionID/34"</span><span class="p">,</span>
   <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span>
   <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
@@ -2241,7 +2241,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
 
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.surcoseguros.com.ar/v1/payments/delete/subscriptionID/34"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.rebill.to/v1/payments/delete/subscriptionID/34"</span><span class="x">
 
     </span><span class="n">req</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"DELETE"</span><span class="p">,</span><span class="x"> </span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="no">nil</span><span class="p">)</span><span class="x">
 
@@ -2258,7 +2258,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="p">}</span><span class="x">
 </span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
-<p><code>DELETE https://api.surcoseguros.com.ar/v1/payments/delete/:type/:id</code></p>
+<p><code>DELETE https://api.rebill.to/v1/payments/delete/:type/:id</code></p>
 
 <table><thead>
 <tr>
@@ -2292,14 +2292,14 @@ After the payment is processed, the customer will be returned to the <code>callb
 </tr>
 </tbody></table>
 <h1 id='plans'>Plans</h1><h2 id='get-all-plans'>Get All Plans</h2><pre class="highlight shell tab-shell"><code>curl --request GET <span class="se">\</span>
-  --url <span class="s1">'https://api.surcoseguros.com.ar/v1/plans/all'</span> <span class="se">\</span>
+  --url <span class="s1">'https://api.rebill.to/v1/plans/all'</span> <span class="se">\</span>
   --header <span class="s1">'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"http"</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
   <span class="s2">"hostname"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">"https://api.surcoseguros.com.ar"</span>
+    <span class="s2">"https://api.rebill.to"</span>
   <span class="p">],</span>
   <span class="s2">"path"</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">"v1"</span><span class="p">,</span>
@@ -2328,7 +2328,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </code></pre><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.surcoseguros.com.ar/v1/plans/all"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.rebill.to/v1/plans/all"</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
 
@@ -2339,7 +2339,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.surcoseguros.com.ar/v1/plans/all"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.rebill.to/v1/plans/all"</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span><span class="p">}</span>
 
@@ -2351,7 +2351,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.surcoseguros.com.ar/v1/plans/all"</span><span class="p">,</span>
+  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.rebill.to/v1/plans/all"</span><span class="p">,</span>
   <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span>
   <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
@@ -2383,7 +2383,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
 
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.surcoseguros.com.ar/v1/plans/all"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.rebill.to/v1/plans/all"</span><span class="x">
 
     </span><span class="n">req</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span><span class="x"> </span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="no">nil</span><span class="p">)</span><span class="x">
 
@@ -2399,7 +2399,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="p">}</span><span class="x">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://api.surcoseguros.com.ar/v1/plans/all</code></p>
+<p><code>GET https://api.rebill.to/v1/plans/all</code></p>
 
 <table><thead>
 <tr>
@@ -2417,14 +2417,14 @@ After the payment is processed, the customer will be returned to the <code>callb
 </tr>
 </tbody></table>
 <h2 id='get-a-specific-plan'>Get a Specific Plan</h2><pre class="highlight shell tab-shell"><code>curl --request GET <span class="se">\</span>
-  --url <span class="s1">'https://api.surcoseguros.com.ar/v1/plans/mpPlanID/43'</span> <span class="se">\</span>
+  --url <span class="s1">'https://api.rebill.to/v1/plans/mpPlanID/43'</span> <span class="se">\</span>
   --header <span class="s1">'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"http"</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
   <span class="s2">"hostname"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">"https://api.surcoseguros.com.ar"</span>
+    <span class="s2">"https://api.rebill.to"</span>
   <span class="p">],</span>
   <span class="s2">"path"</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">"v1"</span><span class="p">,</span>
@@ -2454,7 +2454,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </code></pre><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.surcoseguros.com.ar/v1/plans/mpPlanID/43"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.rebill.to/v1/plans/mpPlanID/43"</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
 
@@ -2465,7 +2465,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.surcoseguros.com.ar/v1/plans/mpPlanID/43"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.rebill.to/v1/plans/mpPlanID/43"</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span><span class="p">}</span>
 
@@ -2477,7 +2477,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.surcoseguros.com.ar/v1/plans/mpPlanID/43"</span><span class="p">,</span>
+  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.rebill.to/v1/plans/mpPlanID/43"</span><span class="p">,</span>
   <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span>
   <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
@@ -2509,7 +2509,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
 
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.surcoseguros.com.ar/v1/plans/mpPlanID/43"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.rebill.to/v1/plans/mpPlanID/43"</span><span class="x">
 
     </span><span class="n">req</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span><span class="x"> </span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="no">nil</span><span class="p">)</span><span class="x">
 
@@ -2525,7 +2525,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="p">}</span><span class="x">
 </span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET https://api.surcoseguros.com.ar/v1/plans/:type/:id</code></p>
+<p><code>GET https://api.rebill.to/v1/plans/:type/:id</code></p>
 
 <table><thead>
 <tr>
@@ -2559,14 +2559,14 @@ After the payment is processed, the customer will be returned to the <code>callb
 </tr>
 </tbody></table>
 <h1 id='subscriptions'>Subscriptions</h1><h2 id='get-all-subscriptions'>Get All Subscriptions</h2><pre class="highlight shell tab-shell"><code>curl --request GET <span class="se">\</span>
-  --url <span class="s1">'https://api.surcoseguros.com.ar/v1/subscriptions/all'</span> <span class="se">\</span>
+  --url <span class="s1">'https://api.rebill.to/v1/subscriptions/all'</span> <span class="se">\</span>
   --header <span class="s1">'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkUzBCUk5TcWdBUTVDODVwa1cuSVpQZVZQeW95dWUxbDNQeko4MjVjcGRkVjMuOWxrT052ajYifQ.rD9kYRH6Q7VKYAuvxl0VL0b1JQwLMaDHArntRoVugrc'</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"http"</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
   <span class="s2">"hostname"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">"https://api.surcoseguros.com.ar"</span>
+    <span class="s2">"https://api.rebill.to"</span>
   <span class="p">],</span>
   <span class="s2">"path"</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">"v1"</span><span class="p">,</span>
@@ -2596,7 +2596,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </code></pre><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.surcoseguros.com.ar/v1/subscriptions/all"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.rebill.to/v1/subscriptions/all"</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
 
@@ -2607,7 +2607,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.surcoseguros.com.ar/v1/subscriptions/all"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.rebill.to/v1/subscriptions/all"</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkUzBCUk5TcWdBUTVDODVwa1cuSVpQZVZQeW95dWUxbDNQeko4MjVjcGRkVjMuOWxrT052ajYifQ.rD9kYRH6Q7VKYAuvxl0VL0b1JQwLMaDHArntRoVugrc'</span><span class="p">}</span>
 
@@ -2619,7 +2619,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.surcoseguros.com.ar/v1/subscriptions/all"</span><span class="p">,</span>
+  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.rebill.to/v1/subscriptions/all"</span><span class="p">,</span>
   <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span>
   <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
@@ -2651,7 +2651,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
 
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.surcoseguros.com.ar/v1/subscriptions/all"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.rebill.to/v1/subscriptions/all"</span><span class="x">
 
     </span><span class="n">req</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span><span class="x"> </span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="no">nil</span><span class="p">)</span><span class="x">
 
@@ -2667,7 +2667,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="p">}</span><span class="x">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://api.surcoseguros.com.ar/v1/subscriptions/all</code></p>
+<p><code>GET https://api.rebill.to/v1/subscriptions/all</code></p>
 
 <table><thead>
 <tr>
@@ -2685,14 +2685,14 @@ After the payment is processed, the customer will be returned to the <code>callb
 </tr>
 </tbody></table>
 <h2 id='get-a-specific-subscription'>Get a specific Subscription</h2><pre class="highlight shell tab-shell"><code>curl --request GET <span class="se">\</span>
-  --url <span class="s1">'https://api.surcoseguros.com.ar/v1/subscriptions/subscriptionid/3'</span> <span class="se">\</span>
+  --url <span class="s1">'https://api.rebill.to/v1/subscriptions/subscriptionid/3'</span> <span class="se">\</span>
   --header <span class="s1">'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"http"</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
   <span class="s2">"hostname"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">"https://api.surcoseguros.com.ar"</span>
+    <span class="s2">"https://api.rebill.to"</span>
   <span class="p">],</span>
   <span class="s2">"path"</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">"v1"</span><span class="p">,</span>
@@ -2722,7 +2722,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 </code></pre><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.surcoseguros.com.ar/v1/subscriptions/subscriptionid/3"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.rebill.to/v1/subscriptions/subscriptionid/3"</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
 
@@ -2733,7 +2733,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.surcoseguros.com.ar/v1/subscriptions/subscriptionid/3"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.rebill.to/v1/subscriptions/subscriptionid/3"</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'</span><span class="p">}</span>
 
@@ -2745,7 +2745,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.surcoseguros.com.ar/v1/subscriptions/subscriptionid/3"</span><span class="p">,</span>
+  <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">"https://api.rebill.to/v1/subscriptions/subscriptionid/3"</span><span class="p">,</span>
   <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span>
   <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
@@ -2777,7 +2777,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
 
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.surcoseguros.com.ar/v1/subscriptions/subscriptionid/3"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.rebill.to/v1/subscriptions/subscriptionid/3"</span><span class="x">
 
     </span><span class="n">req</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span><span class="x"> </span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="no">nil</span><span class="p">)</span><span class="x">
 
@@ -2793,7 +2793,7 @@ After the payment is processed, the customer will be returned to the <code>callb
 
 </span><span class="p">}</span><span class="x">
 </span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET https://api.surcoseguros.com.ar/v1/subscriptions/:type/;id</code></p>
+<p><code>GET https://api.rebill.to/v1/subscriptions/:type/;id</code></p>
 
 <table><thead>
 <tr>

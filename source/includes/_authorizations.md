@@ -10,7 +10,7 @@ Note that this feature is for Administrators only.
 
 ```shell
 curl --request GET \
-  --url 'https://api.surcoseguros.com.ar/v1/roles/all' \
+  --url 'https://api.rebill.to/v1/roles/all' \
   --header 'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkRGJXY2FtMW9HcEVhZUtHemt0NE5iZW5JUVM5dkMwRXVtaWlxc2J4ejFmek84ekFSNW1WUW0ifQ.DD1Wk4qBmEL1xOu8CaJv4WzJLcNPR-OqCZ6jg114P78'
 ```
 
@@ -20,7 +20,7 @@ var http = require("http");
 var options = {
   "method": "GET",
   "hostname": [
-    "https://api.surcoseguros.com.ar"
+    "https://api.rebill.to"
   ],
   "path": [
     "v1",
@@ -52,7 +52,7 @@ req.end();
 require 'uri'
 require 'net/http'
 
-url = URI("https://api.surcoseguros.com.ar/v1/roles/all")
+url = URI("https://api.rebill.to/v1/roles/all")
 
 http = Net::HTTP.new(url.host, url.port)
 
@@ -66,7 +66,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "https://api.surcoseguros.com.ar/v1/roles/all"
+url = "https://api.rebill.to/v1/roles/all"
 
 headers = {'Authorization': 'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkRGJXY2FtMW9HcEVhZUtHemt0NE5iZW5JUVM5dkMwRXVtaWlxc2J4ejFmek84ekFSNW1WUW0ifQ.DD1Wk4qBmEL1xOu8CaJv4WzJLcNPR-OqCZ6jg114P78'}
 
@@ -81,7 +81,7 @@ print(response.text)
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.surcoseguros.com.ar/v1/roles/all",
+  CURLOPT_URL => "https://api.rebill.to/v1/roles/all",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -116,7 +116,7 @@ import (
 
 func main() {
 
-	url := "https://api.surcoseguros.com.ar/v1/roles/all"
+	url := "https://api.rebill.to/v1/roles/all"
 
 	req, _ := http.NewRequest("GET", url, nil)
 
@@ -156,7 +156,7 @@ func main() {
 
 ### HTTP Request
 
-`GET https://api.surcoseguros.com.ar/v1/roles/all`
+`GET https://api.rebill.to/v1/roles/all`
 
 Header | Content
 --------- | -----------
@@ -174,7 +174,7 @@ description | Description of the new role.
 
 ```shell
 curl --request GET \
-  --url 'https://api.surcoseguros.com.ar/v1/roles/permissions' \
+  --url 'https://api.rebill.to/v1/roles/permissions' \
   --header 'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkRGJXY2FtMW9HcEVhZUtHemt0NE5iZW5JUVM5dkMwRXVtaWlxc2J4ejFmek84ekFSNW1WUW0ifQ.DD1Wk4qBmEL1xOu8CaJv4WzJLcNPR-OqCZ6jg114P78'
 ```
 
@@ -184,7 +184,7 @@ var http = require("http");
 var options = {
   "method": "GET",
   "hostname": [
-    "https://api.surcoseguros.com.ar"
+    "https://api.rebill.to"
   ],
   "path": [
     "v1",
@@ -216,7 +216,7 @@ req.end();
 require 'uri'
 require 'net/http'
 
-url = URI("https://api.surcoseguros.com.ar/v1/roles/permissions")
+url = URI("https://api.rebill.to/v1/roles/permissions")
 
 http = Net::HTTP.new(url.host, url.port)
 
@@ -230,7 +230,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "https://api.surcoseguros.com.ar/v1/roles/permissions"
+url = "https://api.rebill.to/v1/roles/permissions"
 
 headers = {'Authorization': 'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkRGJXY2FtMW9HcEVhZUtHemt0NE5iZW5JUVM5dkMwRXVtaWlxc2J4ejFmek84ekFSNW1WUW0ifQ.DD1Wk4qBmEL1xOu8CaJv4WzJLcNPR-OqCZ6jg114P78'}
 
@@ -245,7 +245,7 @@ print(response.text)
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.surcoseguros.com.ar/v1/roles/permissions",
+  CURLOPT_URL => "https://api.rebill.to/v1/roles/permissions",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -280,7 +280,7 @@ import (
 
 func main() {
 
-	url := "https://api.surcoseguros.com.ar/v1/roles/permissions"
+	url := "https://api.rebill.to/v1/roles/permissions"
 
 	req, _ := http.NewRequest("GET", url, nil)
 
@@ -313,7 +313,7 @@ func main() {
 ```
 ### HTTP Request
 
-`GET https://api.surcoseguros.com.ar/v1/roles/permissions`
+`GET https://api.rebill.to/v1/roles/permissions`
 
 Header | Content
 --------- | -----------
@@ -331,7 +331,7 @@ Parameter | Description
 
 ```shell
 curl --request GET \
-  --url 'https://api.surcoseguros.com.ar/v1/roles/1' \
+  --url 'https://api.rebill.to/v1/roles/1' \
   --header 'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkRGJXY2FtMW9HcEVhZUtHemt0NE5iZW5JUVM5dkMwRXVtaWlxc2J4ejFmek84ekFSNW1WUW0ifQ.DD1Wk4qBmEL1xOu8CaJv4WzJLcNPR-OqCZ6jg114P78'
 ```
 
@@ -341,7 +341,7 @@ var http = require("http");
 var options = {
   "method": "GET",
   "hostname": [
-    "https://api.surcoseguros.com.ar"
+    "https://api.rebill.to"
   ],
   "path": [
     "v1",
@@ -373,7 +373,7 @@ req.end();
 require 'uri'
 require 'net/http'
 
-url = URI("https://api.surcoseguros.com.ar/v1/roles/1")
+url = URI("https://api.rebill.to/v1/roles/1")
 
 http = Net::HTTP.new(url.host, url.port)
 
@@ -387,7 +387,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "https://api.surcoseguros.com.ar/v1/roles/1"
+url = "https://api.rebill.to/v1/roles/1"
 
 headers = {'Authorization': 'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkRGJXY2FtMW9HcEVhZUtHemt0NE5iZW5JUVM5dkMwRXVtaWlxc2J4ejFmek84ekFSNW1WUW0ifQ.DD1Wk4qBmEL1xOu8CaJv4WzJLcNPR-OqCZ6jg114P78'}
 
@@ -402,7 +402,7 @@ print(response.text)
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.surcoseguros.com.ar/v1/roles/1",
+  CURLOPT_URL => "https://api.rebill.to/v1/roles/1",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -437,7 +437,7 @@ import (
 
 func main() {
 
-	url := "https://api.surcoseguros.com.ar/v1/roles/1"
+	url := "https://api.rebill.to/v1/roles/1"
 
 	req, _ := http.NewRequest("GET", url, nil)
 
@@ -456,7 +456,7 @@ func main() {
 
 ### HTTP Request
 
-`GET https://api.surcoseguros.com.ar/v1/roles/:id`
+`GET https://api.rebill.to/v1/roles/:id`
 
 Header | Content
 --------- | -----------
@@ -474,7 +474,7 @@ Parameter | Description
 
 ```shell
 curl --request PUT \
-  --url 'https://api.surcoseguros.com.ar/v1/roles/new' \
+  --url 'https://api.rebill.to/v1/roles/new' \
   --header 'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkRGJXY2FtMW9HcEVhZUtHemt0NE5iZW5JUVM5dkMwRXVtaWlxc2J4ejFmek84ekFSNW1WUW0ifQ.DD1Wk4qBmEL1xOu8CaJv4WzJLcNPR-OqCZ6jg114P78' \
   --header 'Content-Type: application/x-www-form-urlencoded' \
   --data 'name=test&description=descriptiontest'
@@ -487,7 +487,7 @@ var http = require("http");
 var options = {
   "method": "PUT",
   "hostname": [
-    "https://api.surcoseguros.com.ar"
+    "https://api.rebill.to"
   ],
   "path": [
     "v1",
@@ -521,7 +521,7 @@ req.end();
 require 'uri'
 require 'net/http'
 
-url = URI("https://api.surcoseguros.com.ar/v1/roles/new")
+url = URI("https://api.rebill.to/v1/roles/new")
 
 http = Net::HTTP.new(url.host, url.port)
 
@@ -537,7 +537,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "https://api.surcoseguros.com.ar/v1/roles/new"
+url = "https://api.rebill.to/v1/roles/new"
 
 payload = "name=test&description=descriptiontest"
 headers = {
@@ -556,7 +556,7 @@ print(response.text)
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.surcoseguros.com.ar/v1/roles/new",
+  CURLOPT_URL => "https://api.rebill.to/v1/roles/new",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -594,7 +594,7 @@ import (
 
 func main() {
 
-	url := "https://api.surcoseguros.com.ar/v1/roles/new"
+	url := "https://api.rebill.to/v1/roles/new"
 
 	payload := strings.NewReader("name=test&description=descriptiontest")
 
@@ -616,7 +616,7 @@ func main() {
 
 ### HTTP Request
 
-`PUT https://api.surcoseguros.com.ar/v1/roles/new`
+`PUT https://api.rebill.to/v1/roles/new`
 
 Header | Content
 --------- | -----------
@@ -634,7 +634,7 @@ Parameter | Description
 
 ```shell
 curl --request POST \
-  --url 'https://api.surcoseguros.com.ar/v1/roles/update' \
+  --url 'https://api.rebill.to/v1/roles/update' \
   --header 'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkRGJXY2FtMW9HcEVhZUtHemt0NE5iZW5JUVM5dkMwRXVtaWlxc2J4ejFmek84ekFSNW1WUW0ifQ.DD1Wk4qBmEL1xOu8CaJv4WzJLcNPR-OqCZ6jg114P78' \
   --header 'Content-Type: application/x-www-form-urlencoded' \
   --data 'id=5&name=test1&description=descriptiontest1'
@@ -647,7 +647,7 @@ var http = require("http");
 var options = {
   "method": "POST",
   "hostname": [
-    "https://api.surcoseguros.com.ar"
+    "https://api.rebill.to"
   ],
   "path": [
     "v1",
@@ -681,7 +681,7 @@ req.end();
 require 'uri'
 require 'net/http'
 
-url = URI("https://api.surcoseguros.com.ar/v1/roles/update")
+url = URI("https://api.rebill.to/v1/roles/update")
 
 http = Net::HTTP.new(url.host, url.port)
 
@@ -697,7 +697,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "https://api.surcoseguros.com.ar/v1/roles/update"
+url = "https://api.rebill.to/v1/roles/update"
 
 payload = "id=5&name=test1&description=descriptiontest1"
 headers = {
@@ -716,7 +716,7 @@ print(response.text)
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.surcoseguros.com.ar/v1/roles/update",
+  CURLOPT_URL => "https://api.rebill.to/v1/roles/update",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -754,7 +754,7 @@ import (
 
 func main() {
 
-	url := "https://api.surcoseguros.com.ar/v1/roles/update"
+	url := "https://api.rebill.to/v1/roles/update"
 
 	payload := strings.NewReader("id=5&name=test1&description=descriptiontest1")
 
@@ -776,7 +776,7 @@ func main() {
 
 ### HTTP Request
 
-`POST https://api.surcoseguros.com.ar/v1/roles/update`
+`POST https://api.rebill.to/v1/roles/update`
 
 Header | Content
 --------- | -----------
@@ -794,7 +794,7 @@ Parameter | Description
 
 ```shell
 curl --request PUT \
-  --url 'https://api.surcoseguros.com.ar/v1/roles/addpermission' \
+  --url 'https://api.rebill.to/v1/roles/addpermission' \
   --header 'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkRGJXY2FtMW9HcEVhZUtHemt0NE5iZW5JUVM5dkMwRXVtaWlxc2J4ejFmek84ekFSNW1WUW0ifQ.DD1Wk4qBmEL1xOu8CaJv4WzJLcNPR-OqCZ6jg114P78' \
   --data 'role_id=2&permission_id=2000&description=test'
 ```
@@ -806,7 +806,7 @@ var http = require("http");
 var options = {
   "method": "PUT",
   "hostname": [
-    "https://api.surcoseguros.com.ar"
+    "https://api.rebill.to"
   ],
   "path": [
     "v1",
@@ -839,7 +839,7 @@ req.end();
 require 'uri'
 require 'net/http'
 
-url = URI("https://api.surcoseguros.com.ar/v1/roles/addpermission")
+url = URI("https://api.rebill.to/v1/roles/addpermission")
 
 http = Net::HTTP.new(url.host, url.port)
 
@@ -854,7 +854,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "https://api.surcoseguros.com.ar/v1/roles/addpermission"
+url = "https://api.rebill.to/v1/roles/addpermission"
 
 payload = "role_id=2&permission_id=2000&description=test"
 headers = {'Authorization': 'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkRGJXY2FtMW9HcEVhZUtHemt0NE5iZW5JUVM5dkMwRXVtaWlxc2J4ejFmek84ekFSNW1WUW0ifQ.DD1Wk4qBmEL1xOu8CaJv4WzJLcNPR-OqCZ6jg114P78'}
@@ -870,7 +870,7 @@ print(response.text)
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.surcoseguros.com.ar/v1/roles/addpermission",
+  CURLOPT_URL => "https://api.rebill.to/v1/roles/addpermission",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -907,7 +907,7 @@ import (
 
 func main() {
 
-	url := "https://api.surcoseguros.com.ar/v1/roles/addpermission"
+	url := "https://api.rebill.to/v1/roles/addpermission"
 
 	payload := strings.NewReader("role_id=2&permission_id=2000&description=test")
 
@@ -928,7 +928,7 @@ func main() {
 
 ### HTTP Request
 
-`PUT https://api.surcoseguros.com.ar/v1/roles/addpermission`
+`PUT https://api.rebill.to/v1/roles/addpermission`
 
 Header | Content
 --------- | -----------
@@ -946,7 +946,7 @@ Parameter | Description
 
 ```shell
 curl --request POST \
-  --url 'https://api.surcoseguros.com.ar/v1/roles/removepermission/' \
+  --url 'https://api.rebill.to/v1/roles/removepermission/' \
   --header 'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkRGJXY2FtMW9HcEVhZUtHemt0NE5iZW5JUVM5dkMwRXVtaWlxc2J4ejFmek84ekFSNW1WUW0ifQ.DD1Wk4qBmEL1xOu8CaJv4WzJLcNPR-OqCZ6jg114P78' \
   --data 'role_id=2&permission_id=2000'
 ```
@@ -958,7 +958,7 @@ var http = require("http");
 var options = {
   "method": "POST",
   "hostname": [
-    "https://api.surcoseguros.com.ar"
+    "https://api.rebill.to"
   ],
   "path": [
     "v1",
@@ -992,7 +992,7 @@ req.end();
 require 'uri'
 require 'net/http'
 
-url = URI("https://api.surcoseguros.com.ar/v1/roles/removepermission/")
+url = URI("https://api.rebill.to/v1/roles/removepermission/")
 
 http = Net::HTTP.new(url.host, url.port)
 
@@ -1007,7 +1007,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "https://api.surcoseguros.com.ar/v1/roles/removepermission/"
+url = "https://api.rebill.to/v1/roles/removepermission/"
 
 payload = "role_id=2&permission_id=2000"
 headers = {'Authorization': 'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkRGJXY2FtMW9HcEVhZUtHemt0NE5iZW5JUVM5dkMwRXVtaWlxc2J4ejFmek84ekFSNW1WUW0ifQ.DD1Wk4qBmEL1xOu8CaJv4WzJLcNPR-OqCZ6jg114P78'}
@@ -1023,7 +1023,7 @@ print(response.text)
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.surcoseguros.com.ar/v1/roles/removepermission/",
+  CURLOPT_URL => "https://api.rebill.to/v1/roles/removepermission/",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -1060,7 +1060,7 @@ import (
 
 func main() {
 
-	url := "https://api.surcoseguros.com.ar/v1/roles/removepermission/"
+	url := "https://api.rebill.to/v1/roles/removepermission/"
 
 	payload := strings.NewReader("role_id=2&permission_id=2000")
 
@@ -1081,7 +1081,7 @@ func main() {
 
 ### HTTP Request
 
-`POST https://api.surcoseguros.com.ar/v1/roles/removepermission/`
+`POST https://api.rebill.to/v1/roles/removepermission/`
 
 Header | Content
 --------- | -----------
@@ -1099,7 +1099,7 @@ Parameter | Description
 
 ```shell
 curl --request PUT \
-  --url 'https://api.surcoseguros.com.ar/v1/roles/settouser' \
+  --url 'https://api.rebill.to/v1/roles/settouser' \
   --header 'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkRGJXY2FtMW9HcEVhZUtHemt0NE5iZW5JUVM5dkMwRXVtaWlxc2J4ejFmek84ekFSNW1WUW0ifQ.DD1Wk4qBmEL1xOu8CaJv4WzJLcNPR-OqCZ6jg114P78' \
   --data 'user_id=11&role_id=13'
 ```
@@ -1111,7 +1111,7 @@ var http = require("http");
 var options = {
   "method": "PUT",
   "hostname": [
-    "https://api.surcoseguros.com.ar"
+    "https://api.rebill.to"
   ],
   "path": [
     "v1",
@@ -1144,7 +1144,7 @@ req.end();
 require 'uri'
 require 'net/http'
 
-url = URI("https://api.surcoseguros.com.ar/v1/roles/settouser")
+url = URI("https://api.rebill.to/v1/roles/settouser")
 
 http = Net::HTTP.new(url.host, url.port)
 
@@ -1159,7 +1159,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "https://api.surcoseguros.com.ar/v1/roles/settouser"
+url = "https://api.rebill.to/v1/roles/settouser"
 
 payload = "user_id=11&role_id=13"
 headers = {'Authorization': 'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkRGJXY2FtMW9HcEVhZUtHemt0NE5iZW5JUVM5dkMwRXVtaWlxc2J4ejFmek84ekFSNW1WUW0ifQ.DD1Wk4qBmEL1xOu8CaJv4WzJLcNPR-OqCZ6jg114P78'}
@@ -1175,7 +1175,7 @@ print(response.text)
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.surcoseguros.com.ar/v1/roles/settouser",
+  CURLOPT_URL => "https://api.rebill.to/v1/roles/settouser",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -1212,7 +1212,7 @@ import (
 
 func main() {
 
-	url := "https://api.surcoseguros.com.ar/v1/roles/settouser"
+	url := "https://api.rebill.to/v1/roles/settouser"
 
 	payload := strings.NewReader("user_id=11&role_id=13")
 
@@ -1233,7 +1233,7 @@ func main() {
 
 ### HTTP Request
 
-`PUT https://api.surcoseguros.com.ar/v1/roles/settouser`
+`PUT https://api.rebill.to/v1/roles/settouser`
 
 Header | Content
 --------- | -----------
@@ -1251,7 +1251,7 @@ Parameter | Description
 
 ```shell
 curl --request DELETE \
-  --url 'https://api.surcoseguros.com.ar/v1/roles/delete/5' \
+  --url 'https://api.rebill.to/v1/roles/delete/5' \
   --header 'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkRGJXY2FtMW9HcEVhZUtHemt0NE5iZW5JUVM5dkMwRXVtaWlxc2J4ejFmek84ekFSNW1WUW0ifQ.DD1Wk4qBmEL1xOu8CaJv4WzJLcNPR-OqCZ6jg114P78' \
   --header 'Content-Type: application/json'
 ```
@@ -1262,7 +1262,7 @@ var http = require("http");
 var options = {
   "method": "DELETE",
   "hostname": [
-    "https://api.surcoseguros.com.ar"
+    "https://api.rebill.to"
   ],
   "path": [
     "v1",
@@ -1296,7 +1296,7 @@ req.end();
 require 'uri'
 require 'net/http'
 
-url = URI("https://api.surcoseguros.com.ar/v1/roles/delete/5")
+url = URI("https://api.rebill.to/v1/roles/delete/5")
 
 http = Net::HTTP.new(url.host, url.port)
 
@@ -1311,7 +1311,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "https://api.surcoseguros.com.ar/v1/roles/delete/5"
+url = "https://api.rebill.to/v1/roles/delete/5"
 
 headers = {
     'Content-Type': "application/json",
@@ -1329,7 +1329,7 @@ print(response.text)
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.surcoseguros.com.ar/v1/roles/delete/5",
+  CURLOPT_URL => "https://api.rebill.to/v1/roles/delete/5",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -1365,7 +1365,7 @@ import (
 
 func main() {
 
-	url := "https://api.surcoseguros.com.ar/v1/roles/delete/5"
+	url := "https://api.rebill.to/v1/roles/delete/5"
 
 	req, _ := http.NewRequest("DELETE", url, nil)
 
@@ -1385,7 +1385,7 @@ func main() {
 
 ### HTTP Request
 
-`DELETE https://api.surcoseguros.com.ar/v1/roles/delete/:id`
+`DELETE https://api.rebill.to/v1/roles/delete/:id`
 
 Header | Content
 --------- | -----------

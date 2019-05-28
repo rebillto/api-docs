@@ -1,8 +1,8 @@
 <p align="center">
-  SURCO SEGUROS API DOCUMENTATION
+  REBILL API DOCUMENTATION
 </p>
 
-<p align="center"><em>Visit the full API Docs from <a href="https://docs.surcoseguros.com.ar">the Surco Seguros API Docs Website</a> </em>.</p>
+<p align="center"><em>Visit the full API Docs from <a href="https://docs.rebill.to">the Rebill API Docs Website</a> </em>.</p>
 
 Getting Started with the project
 ------------------------------
@@ -18,7 +18,7 @@ You're going to need:
 ### Getting Set Up
 
 1. Fork this repository on GitHub.
-2. Clone *your forked repository* (not our original one) to your hard drive with `git clone https://github.com/surcoseguros/api-docs.git`
+2. Clone *your forked repository* (not our original one) to your hard drive with `git clone https://github.com/Rebillseguros/api-docs.git`
 3. `cd api-docs`
 4. Initialize and start the project. You can either do this locally, or with Vagrant:
 
@@ -47,6 +47,6 @@ For those who don't have JavaScript runtime or are experiencing JavaScript runti
 Need Help? Found a bug?
 --------------------
 
-[Submit an issue](https://github.com/surcoseguros/api-docs/issues) to the GitHub Project if you need any help. And, of course, feel free to submit pull requests with bug fixes or changes.
+[Submit an issue](https://github.com/Rebillseguros/api-docs/issues) to the GitHub Project if you need any help. And, of course, feel free to submit pull requests with bug fixes or changes.
 
 <p><em>This documentation was created based on the <a href="https://lord.github.io/slate">Slate</a> open source project.</p>

@@ -5,7 +5,7 @@
 
 ```shell
 curl --request GET \
-  --url 'https://api.surcoseguros.com.ar/v1/payments/all' \
+  --url 'https://api.rebill.to/v1/payments/all' \
   --header 'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'
 ```
 
@@ -15,7 +15,7 @@ var http = require("http");
 var options = {
   "method": "GET",
   "hostname": [
-    "https://api.surcoseguros.com.ar"
+    "https://api.rebill.to"
   ],
   "path": [
     "v1",
@@ -47,7 +47,7 @@ req.end();
 require 'uri'
 require 'net/http'
 
-url = URI("https://api.surcoseguros.com.ar/v1/payments/all")
+url = URI("https://api.rebill.to/v1/payments/all")
 
 http = Net::HTTP.new(url.host, url.port)
 
@@ -61,7 +61,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "https://api.surcoseguros.com.ar/v1/payments/all"
+url = "https://api.rebill.to/v1/payments/all"
 
 headers = {'Authorization': 'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'}
 
@@ -76,7 +76,7 @@ print(response.text)
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.surcoseguros.com.ar/v1/payments/all",
+  CURLOPT_URL => "https://api.rebill.to/v1/payments/all",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -111,7 +111,7 @@ import (
 
 func main() {
 
-	url := "https://api.surcoseguros.com.ar/v1/payments/all"
+	url := "https://api.rebill.to/v1/payments/all"
 
 	req, _ := http.NewRequest("GET", url, nil)
 
@@ -130,7 +130,7 @@ func main() {
 
 ### HTTP Request
 
-`GET https://api.surcoseguros.com.ar/v1/payments/all`
+`GET https://api.rebill.to/v1/payments/all`
 
 ### URL Parameters
 
@@ -143,7 +143,7 @@ ID | The ID of the Customer to retrieve
 
 ```shell
 curl --request GET \
-  --url 'https://api.surcoseguros.com.ar/v1/payments/subscriptionID/34' \
+  --url 'https://api.rebill.to/v1/payments/subscriptionID/34' \
   --header 'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'
 ```
 
@@ -153,7 +153,7 @@ var http = require("http");
 var options = {
   "method": "GET",
   "hostname": [
-    "https://api.surcoseguros.com.ar"
+    "https://api.rebill.to"
   ],
   "path": [
     "v1",
@@ -186,7 +186,7 @@ req.end();
 require 'uri'
 require 'net/http'
 
-url = URI("https://api.surcoseguros.com.ar/v1/payments/subscriptionID/34")
+url = URI("https://api.rebill.to/v1/payments/subscriptionID/34")
 
 http = Net::HTTP.new(url.host, url.port)
 
@@ -200,7 +200,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "https://api.surcoseguros.com.ar/v1/payments/subscriptionID/34"
+url = "https://api.rebill.to/v1/payments/subscriptionID/34"
 
 headers = {'Authorization': 'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'}
 
@@ -215,7 +215,7 @@ print(response.text)
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.surcoseguros.com.ar/v1/payments/subscriptionID/34",
+  CURLOPT_URL => "https://api.rebill.to/v1/payments/subscriptionID/34",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -250,7 +250,7 @@ import (
 
 func main() {
 
-	url := "https://api.surcoseguros.com.ar/v1/payments/subscriptionID/34"
+	url := "https://api.rebill.to/v1/payments/subscriptionID/34"
 
 	req, _ := http.NewRequest("GET", url, nil)
 
@@ -269,7 +269,7 @@ func main() {
 
 ### HTTP Request
 
-`GET https://api.surcoseguros.com.ar/v1/payments/:type/:id`
+`GET https://api.rebill.to/v1/payments/:type/:id`
 
 Header | Content
 --------- | -----------
@@ -287,7 +287,7 @@ Parameter | Description
 
 ```shell
 curl --request POST \
-  --url 'https://api.surcoseguros.com.ar/v1/payments/new' \
+  --url 'https://api.rebill.to/v1/payments/new' \
   --header 'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM' \
   --header 'Content-Type: application/x-www-form-urlencoded' \
   --data 'planID=4312&subscriptionID=34&creation=01%2F03%2F2018&debit_date=03%2F01%2F2020&amount=20&setup_fee=30&currencyID=ARS'
@@ -300,7 +300,7 @@ var http = require("http");
 var options = {
   "method": "POST",
   "hostname": [
-    "https://api.surcoseguros.com.ar"
+    "https://api.rebill.to"
   ],
   "path": [
     "v1",
@@ -340,7 +340,7 @@ req.end();
 require 'uri'
 require 'net/http'
 
-url = URI("https://api.surcoseguros.com.ar/v1/payments/new")
+url = URI("https://api.rebill.to/v1/payments/new")
 
 http = Net::HTTP.new(url.host, url.port)
 
@@ -356,7 +356,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "https://api.surcoseguros.com.ar/v1/payments/new"
+url = "https://api.rebill.to/v1/payments/new"
 
 payload = "planID=4312&subscriptionID=34&creation=01%2F03%2F2018&debit_date=03%2F01%2F2020&amount=20&setup_fee=30&currencyID=ARS"
 headers = {
@@ -375,7 +375,7 @@ print(response.text)
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.surcoseguros.com.ar/v1/payments/new",
+  CURLOPT_URL => "https://api.rebill.to/v1/payments/new",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -413,7 +413,7 @@ import (
 
 func main() {
 
-	url := "https://api.surcoseguros.com.ar/v1/payments/new"
+	url := "https://api.rebill.to/v1/payments/new"
 
 	payload := strings.NewReader("planID=4312&subscriptionID=34&creation=01%2F03%2F2018&debit_date=03%2F01%2F2020&amount=20&setup_fee=30&currencyID=ARS")
 
@@ -435,7 +435,7 @@ func main() {
 
 ### HTTP Request
 
-`POST https://api.surcoseguros.com.ar/v1/payments/new`
+`POST https://api.rebill.to/v1/payments/new`
 
 Header | Content
 --------- | -----------
@@ -458,7 +458,7 @@ setup_fee | 30
 
 ```shell
 curl --request POST \
-  --url 'https://api.surcoseguros.com.ar/v1/payments/update' \
+  --url 'https://api.rebill.to/v1/payments/update' \
   --header 'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM' \
   --data 'id=4&planID=431123123&subscriptionID=34123123&creation=01%2F03%2F2018&debit_date=03%2F01%2F2020&amount=20&setup_fee=300&currencyID=ARS'
 ```
@@ -470,7 +470,7 @@ var http = require("http");
 var options = {
   "method": "POST",
   "hostname": [
-    "https://api.surcoseguros.com.ar"
+    "https://api.rebill.to"
   ],
   "path": [
     "v1",
@@ -510,7 +510,7 @@ req.end();
 require 'uri'
 require 'net/http'
 
-url = URI("https://api.surcoseguros.com.ar/v1/payments/update")
+url = URI("https://api.rebill.to/v1/payments/update")
 
 http = Net::HTTP.new(url.host, url.port)
 
@@ -525,7 +525,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "https://api.surcoseguros.com.ar/v1/payments/update"
+url = "https://api.rebill.to/v1/payments/update"
 
 payload = "id=4&planID=431123123&subscriptionID=34123123&creation=01%2F03%2F2018&debit_date=03%2F01%2F2020&amount=20&setup_fee=300&currencyID=ARS"
 headers = {'Authorization': 'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'}
@@ -541,7 +541,7 @@ print(response.text)
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.surcoseguros.com.ar/v1/payments/update",
+  CURLOPT_URL => "https://api.rebill.to/v1/payments/update",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -578,7 +578,7 @@ import (
 
 func main() {
 
-	url := "https://api.surcoseguros.com.ar/v1/payments/update"
+	url := "https://api.rebill.to/v1/payments/update"
 
 	payload := strings.NewReader("id=4&planID=431123123&subscriptionID=34123123&creation=01%2F03%2F2018&debit_date=03%2F01%2F2020&amount=20&setup_fee=300&currencyID=ARS")
 
@@ -599,7 +599,7 @@ func main() {
 
 ### HTTP Request
 
-`POST https://api.surcoseguros.com.ar/v1/payments/update`
+`POST https://api.rebill.to/v1/payments/update`
 
 Header | Content
 --------- | -----------
@@ -622,7 +622,7 @@ setup_fee | 30
 
 ```shell
 curl --request DELETE \
-  --url 'https://api.surcoseguros.com.ar/v1/payments/delete/subscriptionID/34' \
+  --url 'https://api.rebill.to/v1/payments/delete/subscriptionID/34' \
   --header 'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkUzBCUk5TcWdBUTVDODVwa1cuSVpQZVZQeW95dWUxbDNQeko4MjVjcGRkVjMuOWxrT052ajYifQ.rD9kYRH6Q7VKYAuvxl0VL0b1JQwLMaDHArntRoVugrc' \
   --header 'Content-Type: application/json'
 ```
@@ -633,7 +633,7 @@ var http = require("http");
 var options = {
   "method": "DELETE",
   "hostname": [
-    "https://api.surcoseguros.com.ar"
+    "https://api.rebill.to"
   ],
   "path": [
     "v1",
@@ -668,7 +668,7 @@ req.end();
 require 'uri'
 require 'net/http'
 
-url = URI("https://api.surcoseguros.com.ar/v1/payments/delete/subscriptionID/34")
+url = URI("https://api.rebill.to/v1/payments/delete/subscriptionID/34")
 
 http = Net::HTTP.new(url.host, url.port)
 
@@ -683,7 +683,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "https://api.surcoseguros.com.ar/v1/payments/delete/subscriptionID/34"
+url = "https://api.rebill.to/v1/payments/delete/subscriptionID/34"
 
 headers = {
     'Content-Type': "application/json",
@@ -701,7 +701,7 @@ print(response.text)
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.surcoseguros.com.ar/v1/payments/delete/subscriptionID/34",
+  CURLOPT_URL => "https://api.rebill.to/v1/payments/delete/subscriptionID/34",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -737,7 +737,7 @@ import (
 
 func main() {
 
-	url := "https://api.surcoseguros.com.ar/v1/payments/delete/subscriptionID/34"
+	url := "https://api.rebill.to/v1/payments/delete/subscriptionID/34"
 
 	req, _ := http.NewRequest("DELETE", url, nil)
 
@@ -757,7 +757,7 @@ func main() {
 
 ### HTTP Request
 
-`DELETE https://api.surcoseguros.com.ar/v1/payments/delete/:type/:id`
+`DELETE https://api.rebill.to/v1/payments/delete/:type/:id`
 
 Header | Content
 --------- | -----------

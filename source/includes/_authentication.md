@@ -4,7 +4,7 @@
 
 ```shell
 curl --request GET \
-  --url 'https://api.surcoseguros.com.ar/v1/getToken' \
+  --url 'https://api.rebill.to/v1/getToken' \
   --header 'Content-Type: application/x-www-form-urlencoded' \
   --header 'email: you@domain.com' \
   --header 'password: your-passw0rd'
@@ -16,7 +16,7 @@ var http = require("http");
 var options = {
   "method": "GET",
   "hostname": [
-    "https://api.surcoseguros.com.ar"
+    "https://api.rebill.to"
   ],
   "path": [
     "v1",
@@ -49,7 +49,7 @@ req.end();
 require 'uri'
 require 'net/http'
 
-url = URI("https://api.surcoseguros.com.ar/v1/getToken")
+url = URI("https://api.rebill.to/v1/getToken")
 
 http = Net::HTTP.new(url.host, url.port)
 
@@ -65,7 +65,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "https://api.surcoseguros.com.ar/v1/getToken"
+url = "https://api.rebill.to/v1/getToken"
 
 headers = {
     'Content-Type': "application/x-www-form-urlencoded",
@@ -84,7 +84,7 @@ print(response.text)
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.surcoseguros.com.ar/v1/getToken",
+  CURLOPT_URL => "https://api.rebill.to/v1/getToken",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -121,7 +121,7 @@ import (
 
 func main() {
 
-	url := "https://api.surcoseguros.com.ar/v1/getToken"
+	url := "https://api.rebill.to/v1/getToken"
 
 	req, _ := http.NewRequest("GET", url, nil)
 
@@ -144,7 +144,7 @@ First ask for an access token, using your login credentials. A TOKEN will be ret
 
 HTTP Request:
 
-`GET https://api.surcoseguros.com.ar/v1/getToken`
+`GET https://api.rebill.to/v1/getToken`
 
 Headers | Content
 --------- | -----------

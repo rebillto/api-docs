@@ -1,4 +1,4 @@
-#Phone Checker
+#Companies
 
 ## Get All Plans
 
@@ -24,7 +24,7 @@
 
 ### HTTP Request
 
-`GET https://api.surcoseguros.com.ar/v1/plans/all`
+`GET https://api.rebill.to/v1/plans/all`
 
 Header | Content
 --------- | -----------

@@ -1,4 +1,4 @@
-# Errors
+# Common Errors Status Code
 
 Our API libraries raise exceptions for many reasons, such as a failed charge, invalid parameters, authentication errors, and network unavailability. We recommend writing code that gracefully handles all possible API exceptions.
 

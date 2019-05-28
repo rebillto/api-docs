@@ -14,7 +14,7 @@ $(function() {
 window.onpopstate = function() {
   activateLanguage(getLanguageFromQueryString());
 };
-if (location.protocol != 'https:' && window.location.host == 'docs.surcoseguros.com.ar')
+if (location.protocol != 'https:' && window.location.host == 'docs.rebill.to')
 {
  location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
 }

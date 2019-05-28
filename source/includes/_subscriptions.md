@@ -4,7 +4,7 @@
 
 ```shell
 curl --request GET \
-  --url 'https://api.surcoseguros.com.ar/v1/subscriptions/all' \
+  --url 'https://api.rebill.to/v1/subscriptions/all' \
   --header 'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkUzBCUk5TcWdBUTVDODVwa1cuSVpQZVZQeW95dWUxbDNQeko4MjVjcGRkVjMuOWxrT052ajYifQ.rD9kYRH6Q7VKYAuvxl0VL0b1JQwLMaDHArntRoVugrc'
 ```
 
@@ -14,7 +14,7 @@ var http = require("http");
 var options = {
   "method": "GET",
   "hostname": [
-    "https://api.surcoseguros.com.ar"
+    "https://api.rebill.to"
   ],
   "path": [
     "v1",
@@ -47,7 +47,7 @@ req.end();
 require 'uri'
 require 'net/http'
 
-url = URI("https://api.surcoseguros.com.ar/v1/subscriptions/all")
+url = URI("https://api.rebill.to/v1/subscriptions/all")
 
 http = Net::HTTP.new(url.host, url.port)
 
@@ -61,7 +61,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "https://api.surcoseguros.com.ar/v1/subscriptions/all"
+url = "https://api.rebill.to/v1/subscriptions/all"
 
 headers = {'Authorization': 'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicGFzc3dvcmQiOiIkMmEkMTAkUzBCUk5TcWdBUTVDODVwa1cuSVpQZVZQeW95dWUxbDNQeko4MjVjcGRkVjMuOWxrT052ajYifQ.rD9kYRH6Q7VKYAuvxl0VL0b1JQwLMaDHArntRoVugrc'}
 
@@ -76,7 +76,7 @@ print(response.text)
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.surcoseguros.com.ar/v1/subscriptions/all",
+  CURLOPT_URL => "https://api.rebill.to/v1/subscriptions/all",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -111,7 +111,7 @@ import (
 
 func main() {
 
-	url := "https://api.surcoseguros.com.ar/v1/subscriptions/all"
+	url := "https://api.rebill.to/v1/subscriptions/all"
 
 	req, _ := http.NewRequest("GET", url, nil)
 
@@ -130,7 +130,7 @@ func main() {
 
 ### HTTP Request
 
-`GET https://api.surcoseguros.com.ar/v1/subscriptions/all`
+`GET https://api.rebill.to/v1/subscriptions/all`
 
 Header | Content
 --------- | -----------
@@ -142,7 +142,7 @@ Content-type | application/json
 
 ```shell
 curl --request GET \
-  --url 'https://api.surcoseguros.com.ar/v1/subscriptions/subscriptionid/3' \
+  --url 'https://api.rebill.to/v1/subscriptions/subscriptionid/3' \
   --header 'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'
 ```
 
@@ -152,7 +152,7 @@ var http = require("http");
 var options = {
   "method": "GET",
   "hostname": [
-    "https://api.surcoseguros.com.ar"
+    "https://api.rebill.to"
   ],
   "path": [
     "v1",
@@ -185,7 +185,7 @@ req.end();
 require 'uri'
 require 'net/http'
 
-url = URI("https://api.surcoseguros.com.ar/v1/subscriptions/subscriptionid/3")
+url = URI("https://api.rebill.to/v1/subscriptions/subscriptionid/3")
 
 http = Net::HTTP.new(url.host, url.port)
 
@@ -199,7 +199,7 @@ puts response.read_body
 ```python
 import requests
 
-url = "https://api.surcoseguros.com.ar/v1/subscriptions/subscriptionid/3"
+url = "https://api.rebill.to/v1/subscriptions/subscriptionid/3"
 
 headers = {'Authorization': 'JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjdGQXlFNGZicnc1MEtWTkw0elJ4ZWxjaFdlREVwSDBYaUxNeFlPLlhDODR6RGkvWk9mcUsifQ.WJ_ijzdSYqPU8XqXRlDiR2YlSVhpijIPCU6aQFGSBOM'}
 
@@ -214,7 +214,7 @@ print(response.text)
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.surcoseguros.com.ar/v1/subscriptions/subscriptionid/3",
+  CURLOPT_URL => "https://api.rebill.to/v1/subscriptions/subscriptionid/3",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -249,7 +249,7 @@ import (
 
 func main() {
 
-	url := "https://api.surcoseguros.com.ar/v1/subscriptions/subscriptionid/3"
+	url := "https://api.rebill.to/v1/subscriptions/subscriptionid/3"
 
 	req, _ := http.NewRequest("GET", url, nil)
 
@@ -268,7 +268,7 @@ func main() {
 
 ### HTTP Request
 
-`GET https://api.surcoseguros.com.ar/v1/subscriptions/:type/;id`
+`GET https://api.rebill.to/v1/subscriptions/:type/;id`
 
 Header | Content
 --------- | -----------
