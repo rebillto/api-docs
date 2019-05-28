@@ -15,7 +15,6 @@ toc_footers:
 includes:
   - authentication
   - authorizations
-  - checkout
   - organizations
   - customers
   - payments
@@ -37,6 +36,6 @@ Welcome to the Rebill API. You can use our API to access Rebill API endpoints, w
 
 We have language bindings in Curl, Ruby, Python, and Javascript. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
-Rebill uses JWT to allow access to the API. You can access to the APIs using your own personal account, and asking for special access to the other functionalities [by email](mailto:developers@rebill.to?subject=Solicitud de API Key&body=Hola, mi nombre es _____________ y solicito una API Key para desarrollar ________________________________________ para la empresa _______________ radicada en ____________________ . Mi email de contacto es __________________ y telefono __________________ .).
+Rebill uses JWT to allow access to the API. You can access to the APIs using your own personal account, and asking for special access to the other functionalities [by email](mailto:developers@rebill.to).
 
 Looking for any specific Endpoint? Write us with your request to [developers@rebill.to](mailto:developers@rebill.to).
