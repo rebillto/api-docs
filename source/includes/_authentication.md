@@ -1,44 +1,36 @@
-# Authentication
-
-> To authorize, use this code:
+#Authentication
 
 ```shell
-curl --request GET \
-  --url 'https://api.rebill.to/v1/getToken' \
-  --header 'Content-Type: application/x-www-form-urlencoded' \
-  --header 'email: you@domain.com' \
-  --header 'password: your-passw0rd'
+curl --location --request GET "https://api.rebill.to/v1/getToken" \
+  --header "Content-Type: application/x-www-form-urlencoded"
 ```
 
 ```javascript
-var http = require("http");
+var https = require('https');
 
 var options = {
-  "method": "GET",
-  "hostname": [
-    "https://api.rebill.to"
-  ],
-  "path": [
-    "v1",
-    "getToken"
-  ],
-  "headers": {
-    "Content-Type": "application/x-www-form-urlencoded",
-    "email": "you@domain.com",
-    "password": "your-passw0rd"
+  'method': 'GET',
+  'hostname': 'https://api.rebill.to',
+  'path': '/v1/getToken',
+  'headers': {
+    'Content-Type': 'application/x-www-form-urlencoded'
   }
 };
 
-var req = http.request(options, function (res) {
+var req = https.request(options, function (res) {
   var chunks = [];
 
   res.on("data", function (chunk) {
     chunks.push(chunk);
   });
 
-  res.on("end", function () {
+  res.on("end", function (chunk) {
     var body = Buffer.concat(chunks);
     console.log(body.toString());
+  });
+
+  res.on("error", function (error) {
+    console.error(error);
   });
 });
 
@@ -46,17 +38,15 @@ req.end();
 ```
 
 ```ruby
-require 'uri'
-require 'net/http'
+require "uri"
+require "net/http"
 
 url = URI("https://api.rebill.to/v1/getToken")
 
 http = Net::HTTP.new(url.host, url.port)
 
 request = Net::HTTP::Get.new(url)
-request["Content-Type"] = 'application/x-www-form-urlencoded'
-request["email"] = 'you@domain.com'
-request["password"] = 'your-passw0rd'
+request["Content-Type"] = "application/x-www-form-urlencoded"
 
 response = http.request(request)
 puts response.read_body
@@ -64,17 +54,12 @@ puts response.read_body
 
 ```python
 import requests
-
-url = "https://api.rebill.to/v1/getToken"
-
+url = 'https://api.rebill.to/v1/getToken'
+payload = {}
 headers = {
-    'Content-Type': "application/x-www-form-urlencoded",
-    'email': "you@domain.com",
-    'password': "your-passw0rd"
-    }
-
-response = requests.request("GET", url, headers=headers)
-
+  'Content-Type': 'application/x-www-form-urlencoded'
+}
+response = requests.request('GET', url, headers = headers, data = payload, allow_redirects=False, timeout=undefined, allow_redirects=false)
 print(response.text)
 ```
 
@@ -88,13 +73,12 @@ curl_setopt_array($curl, array(
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => false,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_HTTPHEADER => array(
-    "Content-Type: application/x-www-form-urlencoded",
-    "email: you@domain.com",
-    "password: your-passw0rd"
+    "Content-Type: application/x-www-form-urlencoded"
   ),
 ));
 
@@ -107,47 +91,55 @@ if ($err) {
   echo "cURL Error #:" . $err;
 } else {
   echo $response;
-}
+} ?>
 ```
 
 ```go
 package main
 
 import (
-	"fmt"
-	"net/http"
-	"io/ioutil"
+  "fmt"
+  "os"
+  "path/filepath"
+  "net/http"
+  "io/ioutil"
 )
 
 func main() {
 
-	url := "https://api.rebill.to/v1/getToken"
+  url := "https://api.rebill.to/v1/getToken"
+  method := "GET"
 
-	req, _ := http.NewRequest("GET", url, nil)
+  client := &http.Client {
+    CheckRedirect: func(req *http.Request, via []*http.Request) error {
+      return http.ErrUseLastResponse
+    },
+  }
+  req, err := http.NewRequest(method, url, nil)
 
-	req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
-	req.Header.Add("email", "you@domain.com")
-	req.Header.Add("password", "your-passw0rd")
+  if err != nil {
+    fmt.Println(err)
+  }
+  req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
 
-	res, _ := http.DefaultClient.Do(req)
+  res, err := client.Do(req)
+  defer res.Body.Close()
+  body, err := ioutil.ReadAll(res.Body)
 
-	defer res.Body.Close()
-	body, _ := ioutil.ReadAll(res.Body)
-
-	fmt.Println(res)
-	fmt.Println(string(body))
-
+  fmt.Println(string(body))
 }
 ```
 
-First ask for an access token, using your login credentials. A TOKEN will be returned and shall be included in the HEADER of all your request as `Authorization`.
+Note that the `username` and `password` shall be sent using `Basic Authentication`. This means that both components shall be sent in base64 format.
+Your e-mail is your username.
 
-HTTP Request:
+### HTTP Request
 
 `GET https://api.rebill.to/v1/getToken`
 
-Headers | Content
---------- | -----------
-Content-Type | application/x-www-form-urlencoded
-username | youremail@domain.com
-password | your-password
+### Headers
+
+Header | Content | Required | Description
+--------- | ----------- | ----------- | -----------
+Content-Type | application/json | Yes | Can also be sent as `application/x-www-form-urlencoded`
+Authorization | {base64 hash} | Yes | Your username and password in base64.

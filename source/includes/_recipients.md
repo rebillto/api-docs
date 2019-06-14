@@ -1,4 +1,4 @@
-#Users
+#Regions
 
 ## Get All Plans
 
