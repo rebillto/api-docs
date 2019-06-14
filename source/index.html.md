@@ -10,7 +10,9 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - go
 
 toc_footers:
-  - <a href='mailto:developers@rebill.to?subject=Assistance Request'>Request Assistance</a>
+  - <a target="_blank" href="https://docs.rebill.to/resources/postman/Rebill.postman_collection.json">Download Postman Collection</a>
+  - <a target="_blank" href="https://docs.rebill.to/resources/postman/Rebill.postman_environment.json">Download Postman Environment</a>
+  - <br><a href='mailto:developers@rebill.to?subject=Assistance Request'>Request Assistance</a>
 
 includes:
   - authentication

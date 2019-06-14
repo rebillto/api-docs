@@ -142,4 +142,4 @@ Your e-mail is your username.
 Header | Content | Required | Description
 --------- | ----------- | ----------- | -----------
 Content-Type | application/json | Yes | Can also be sent as `application/x-www-form-urlencoded`
-Authorization | {base64 hash} | Yes | Your username and password in base64.
+Authorization | `Basic base64_hash` | Yes | Your username and password in base64.
