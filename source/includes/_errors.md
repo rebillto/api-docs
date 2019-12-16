@@ -2,6 +2,14 @@
 
 Our API libraries raise exceptions for many reasons, such as a failed charge, invalid parameters, authentication errors, and network unavailability. We recommend writing code that gracefully handles all possible API exceptions.
 
+### JSON Error Response
+
+Attribute | Content | Always Present | Description
+--------- | ----------- | ----------- | -----------
+`success` | boolean | Yes | Returns `false` as the action performed was not completed successfully.
+`response` | object | Yes | Contains an object with the result of the performed action if success. If an error ocurred, the response object will not exist. Check the error response format.
+
+### Error Status Codes
 
 Error Code | Meaning
 ---------- | -------
@@ -15,3 +23,9 @@ Error Code | Meaning
 429 | Too Many Requests -- You're requesting too much information.
 500 | Internal Server Error -- We had a problem with our server. Try again later.
 503 | Service Unavailable -- We're temporarily offline for maintenance. Please try again later.
+
+### Error Codes
+
+Code | Description
+--------- | -----------
+1001 | Invalid password.

@@ -1,69 +1,68 @@
 #Authentication
 
 ```shell
+CURL Request Example
+
 curl --location --request GET "https://api.rebill.to/v1/getToken" \
-  --header "Content-Type: application/x-www-form-urlencoded"
+--header "Content-Type: application/x-www-form-urlencoded"
 ```
 
 ```javascript
-var https = require('https');
+Node.JS Request Example
 
+var request = require('request');
 var options = {
   'method': 'GET',
-  'hostname': 'https://api.rebill.to',
-  'path': '/v1/getToken',
+  'url': 'https://api.rebill.to/v1/getToken',
   'headers': {
     'Content-Type': 'application/x-www-form-urlencoded'
   }
 };
-
-var req = https.request(options, function (res) {
-  var chunks = [];
-
-  res.on("data", function (chunk) {
-    chunks.push(chunk);
-  });
-
-  res.on("end", function (chunk) {
-    var body = Buffer.concat(chunks);
-    console.log(body.toString());
-  });
-
-  res.on("error", function (error) {
-    console.error(error);
-  });
+request(options, function (error, response) {
+  if (error) throw new Error(error);
+  console.log(response.body);
 });
-
-req.end();
 ```
 
 ```ruby
+Ruby Request Example
+
 require "uri"
 require "net/http"
 
 url = URI("https://api.rebill.to/v1/getToken")
 
-http = Net::HTTP.new(url.host, url.port)
+https = Net::HTTP.new(url.host, url.port);
+https.use_ssl = true
 
 request = Net::HTTP::Get.new(url)
 request["Content-Type"] = "application/x-www-form-urlencoded"
 
-response = http.request(request)
+response = https.request(request)
 puts response.read_body
 ```
 
 ```python
+Python Request Example
+
+
 import requests
-url = 'https://api.rebill.to/v1/getToken'
+
+url = "https://api.rebill.to/v1/getToken"
+
 payload = {}
 headers = {
   'Content-Type': 'application/x-www-form-urlencoded'
 }
-response = requests.request('GET', url, headers = headers, data = payload, allow_redirects=False, timeout=undefined, allow_redirects=false)
-print(response.text)
+
+response = requests.request("GET", url, headers=headers, data = payload)
+
+print(response.text.encode('utf8'))
 ```
 
 ```php
+PHP Request Example
+
 <?php
 
 $curl = curl_init();
@@ -74,7 +73,7 @@ curl_setopt_array($curl, array(
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
   CURLOPT_TIMEOUT => 0,
-  CURLOPT_FOLLOWLOCATION => false,
+  CURLOPT_FOLLOWLOCATION => true,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_HTTPHEADER => array(
@@ -83,24 +82,22 @@ curl_setopt_array($curl, array(
 ));
 
 $response = curl_exec($curl);
-$err = curl_error($curl);
 
 curl_close($curl);
+echo $response;
 
-if ($err) {
-  echo "cURL Error #:" . $err;
-} else {
-  echo $response;
-} ?>
 ```
 
 ```go
+GO Request Example
+
 package main
 
 import (
   "fmt"
   "os"
   "path/filepath"
+  "io"
   "net/http"
   "io/ioutil"
 )
@@ -111,9 +108,6 @@ func main() {
   method := "GET"
 
   client := &http.Client {
-    CheckRedirect: func(req *http.Request, via []*http.Request) error {
-      return http.ErrUseLastResponse
-    },
   }
   req, err := http.NewRequest(method, url, nil)
 
@@ -130,16 +124,38 @@ func main() {
 }
 ```
 
+```json
+JSON Response Example
+
+{
+    "success": true,
+    "response": {
+        "token": "eyJhbGciOiJIUzI1NiJ9.JDJhJDEwJG1FZHNyMUFNaUJXdFlQVlVUdkxaa3VFNFNwbTRwRlIyMnE1R1dYRHRuL01Ba2dEUG9ibjIu.tbxALN3ni1Db0OMX3kBkj09WUnPJxRl8T4JxLTQXgnI",
+        "created": "2019-12-16T02:21:58Z",
+        "expires": "2019-12-16T14:21:58Z",
+        "currentTime": "2019-12-16T10:38:35Z",
+        "remains": "03:43:23",
+        "status": "active"
+    }
+}
+```
+
+
 Note that the `username` and `password` shall be sent using `Basic Authentication`. This means that both components shall be sent in base64 format.
 Your e-mail is your username.
 
-### HTTP Request
+### Request
 
 `GET https://api.rebill.to/v1/getToken`
-
-### Headers
 
 Header | Content | Required | Description
 --------- | ----------- | ----------- | -----------
 Content-Type | application/json | Yes | Can also be sent as `application/x-www-form-urlencoded`
 Authorization | `Basic base64_hash` | Yes | Your username and password in base64.
+
+### Response
+
+Attribute | Content | Always Present | Description
+--------- | ----------- | ----------- | -----------
+`success` | boolean | Yes | Returns `true` if the performed action was success, otherwise `false`.
+`response` | object | Yes | Contains an object with the result of the performed action if success. If an error ocurred, the response object will not exist. Check the error response format.
