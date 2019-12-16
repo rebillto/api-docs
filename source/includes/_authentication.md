@@ -141,10 +141,11 @@ JSON Response Example
 ```
 
 
+The authentication process is through a token Bearer. In order to obtain a token, you shall use your username (email) and password.
 Note that the `username` and `password` shall be sent using `Basic Authentication`. This means that both components shall be sent in base64 format.
-Your e-mail is your username.
+The token has a validity of 12 hours before expiration.
 
-### Request
+#### Headers
 
 `GET https://api.rebill.to/v1/getToken`
 
@@ -153,7 +154,7 @@ Header | Content | Required | Description
 Content-Type | application/json | Yes | Can also be sent as `application/x-www-form-urlencoded`
 Authorization | `Basic base64_hash` | Yes | Your username and password in base64.
 
-### Response
+#### Response
 
 Attribute | Content | Always Present | Description
 --------- | ----------- | ----------- | -----------

@@ -1,49 +1,63 @@
 #Checkout Express
 
 ```shell
-Request Example
+CURL Request Example
 
 ```
 
 ```javascript
-Request Example
+Node.JS Request Example
 
 ```
 
 ```ruby
-Request Example
-
-```
-
-```python
-Request Example
+Ruby Request Example
 
 ```
 
 ```php
-Request Example
+PHP Request Example
 
 ```
 
 ```go
-Request Example
+GO Request Example
 
 ```
 
-Note that the `username` and `password` shall be sent using `Basic Authentication`. This means that both components shall be sent in base64 format.
-Your e-mail is your username.
+```json
+JSON Response Example
 
-### HTTP Request
+```
+
+Some description here.
+
+### Headers
 
 `GET https://api.rebill.to/v1/getToken`
 
 Header | Content | Required | Description
 --------- | ----------- | ----------- | -----------
 Content-Type | application/json | Yes | Can also be sent as `application/x-www-form-urlencoded`
+Authorization | Bearer {access_token} | Yes | Access token.
+
+### Parameters
+
+Name | Parameter | Type | Required | Description
+--------- | --------- | ----------- | ----------- | -----------
+something | QueryString | boolean | No | Something.
+something | Path Parameter | boolean | No | Something.
+
+### Body
+
+Attribute | Content | Required | Description
+--------- | ----------- | ----------- | -----------
+Content-Type | application/json | Yes | Can also be sent as `application/x-www-form-urlencoded`
 Authorization | `Basic base64_hash` | Yes | Your username and password in base64.
 
+### Response
 
-```json
-Response Example
-
-```
+Attribute | Content | Always Present | Description
+--------- | ----------- | ----------- | -----------
+`success` | boolean | Yes | Returns `true` if the performed action was success, otherwise `false`.
+`response` | object | Yes | Contains an object with the result of the performed action if success. If an error ocurred, the response object will not exist. Check the error response format.

@@ -16,21 +16,21 @@ toc_footers:
 
 includes:
   - authentication
-  - roles
   - cards
   - customers
   - notifications
   - organizations
   - payments
   - plans
-  - recipients
   - products
+  - recipients
   - regions
+  - roles
   - subscriptions
   - vat
+  - users
   - vendors
   - webhooks
-  - analytics
   - checkout_landing
   - checkout_express
   - errors

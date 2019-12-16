@@ -1,6 +1,4 @@
-#Group Title
-
-## Request type
+#Title
 
 ```shell
 CURL Request Example
@@ -34,7 +32,7 @@ JSON Response Example
 
 Some description here.
 
-#### Headers
+### Headers
 
 `GET https://api.rebill.to/v1/getToken`
 
@@ -43,23 +41,21 @@ Header | Content | Required | Description
 Content-Type | application/json | Yes | Can also be sent as `application/x-www-form-urlencoded`
 Authorization | Bearer {access_token} | Yes | Access token.
 
-#### Parameters
+### Parameters
 
 Name | Parameter | Type | Required | Description
 --------- | --------- | ----------- | ----------- | -----------
 something | QueryString | boolean | No | Something.
 something | Path Parameter | boolean | No | Something.
 
-#### Body
-
-`GET https://api.rebill.to/v1/getToken`
+### Body
 
 Attribute | Content | Required | Description
 --------- | ----------- | ----------- | -----------
 Content-Type | application/json | Yes | Can also be sent as `application/x-www-form-urlencoded`
 Authorization | `Basic base64_hash` | Yes | Your username and password in base64.
 
-#### Response
+### Response
 
 Attribute | Content | Always Present | Description
 --------- | ----------- | ----------- | -----------
