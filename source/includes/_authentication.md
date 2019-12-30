@@ -764,6 +764,26 @@ Header | Content | Required | Description
 --------- | ----------- | ----------- | -----------
 Content-Type | application/json | Yes | Can also be sent as `application/x-www-form-urlencoded`
 
+#### Body
+
+`POST https://api.rebill.to/v1/signup`
+
+Attribute | Content | Required | Description
+--------- | ----------- | ----------- | -----------
+organization["name"] | String | Yes | Name of the organization
+organization["address_street"] | String | No | Adress name
+organization["address_number"] | String | No | Adress number
+organization["address_floor"] | String | No | Adress floor
+organization["address_apt"] | String | No | Adress apartment
+organization["address_city"] | String | No | Name of the city
+organization["address_province"] | String | No | Name of the Province / State
+organization["address_zipcode"] | String | Yes | Zip Code 
+user["firstName"] | String | Yes | Name of the user
+user["lastName"] | String | Yes | Lastname of the user
+user["email"] | String | Yes | Email of the user (Must be a valid one - Use validate email endpoint if needed)
+user["password"] | String | Yes | Password of the user
+
+
 #### Response
 
 Attribute | Content | Always Present | Description
