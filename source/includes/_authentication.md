@@ -361,9 +361,9 @@ Header | Content | Required | Description
 Content-Type | application/json | Yes | Can also be sent as `application/x-www-form-urlencoded`
 
 #### Body
-Parameter | Description
---------- | ----------- |
-Email | Email in plain text
+Attribute | Content | Required | Description
+--------- | ----------- | ----------- | -----------
+email | String | Yes | Email in plain text
 
 #### Response
 
