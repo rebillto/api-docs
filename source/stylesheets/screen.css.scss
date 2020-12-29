@@ -156,7 +156,7 @@ html, body {
     }
 
     a {
-      color: #556cd6;
+      color: #57a6ec;
       text-decoration: none;
 
       &:hover {
@@ -561,7 +561,7 @@ html, body {
   }
   
   a, a:visited {
-    color: #556cd6;
+    color: #57a6ec;
     font-weight: 500;
   }
   
@@ -585,7 +585,7 @@ html, body {
     &>p { margin: 0; }
 
     a {
-      color: #556cd6;
+      color: #57a6ec;
       text-decoration: none;
       border-bottom: dashed 1px #ccc;
     }
@@ -737,6 +737,8 @@ html, body {
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
   margin-bottom: 50px;
+  color: #c1c9d2;
+  font-size: 14px;
 }
 
 .highlight.plaintext > .copy-clipboard {
@@ -747,9 +749,11 @@ blockquote.plaintext > .lang-switcher {
   display: none;
 }
 
-.highlight.plaintext {
+.highlight.light {
   color: #4f566b;
   background-color: #f7fafc;
+}
+.highlight.plaintext {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.07);
@@ -769,13 +773,13 @@ blockquote.plaintext > .lang-switcher {
   opacity: 0.8;
 }
 
-.content blockquote.plaintext {
+.content blockquote.plaintext.light {
   background-color: #e3e8ee;
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.07);
   box-shadow: 0 0 0 1px rgba(0,0,0,.07);
 }
 
-.content blockquote.plaintext p {
+.content blockquote.plaintext.light p {
   color: #697386;
 }
 
@@ -812,5 +816,32 @@ blockquote.plaintext > .lang-switcher {
     .delete {
       color: #e56f4a;
     }
+  }
+}
+
+.right-block {
+  color: #a3acb9;
+  margin: 0;
+  margin-left: 3vw;
+  margin-bottom: 24px;
+  width: 32vw;
+  float: right;
+  clear: right;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  h1 {
+    color: #2a2f45;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 0px;
+    padding-bottom: 24px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #697386;
   }
 }
