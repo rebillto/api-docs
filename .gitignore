@@ -1,27 +1,27 @@
-# General
-.DS_Store
-.AppleDouble
-.LSOverride
+*.gem
+*.rbc
+.bundle
+.config
+coverage
+InstalledFiles
+lib/bundler/man
+pkg
+rdoc
+spec/reports
+test/tmp
+test/version_tmp
+tmp
+*.DS_STORE
+build/
+.cache
+.vagrant
+.sass-cache
 
-# Icon must end with two \r
-Icon
+# YARD artifacts
+.yardoc
+_yardoc
+doc/
+.idea/
 
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# Vagrant artifacts
+ubuntu-*-console.log

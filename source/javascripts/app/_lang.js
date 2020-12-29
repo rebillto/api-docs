@@ -15,6 +15,21 @@ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.
 */
+
+$(document).ready(function(){
+  var $button = $('#language-switcher').clone().show();
+  $('blockquote').append($button);
+  $('#language-switcher select>optionoption[value="shell"]').click();
+  $('.lang-switcher-select option[value="shell"]').trigger("click");
+  $('.lang-switcher-select').change(function() {
+    $('.lang-switcher-select option').removeAttr("selected");
+    $('.lang-switcher-select option').removeAttr("disabled");
+    $('.lang-switcher-select option[value="'+ this.value +'"]').attr("selected", "selected");
+    $('.lang-switcher-select option[value="'+ this.value +'"]').attr("disabled", "disabled");
+    activateLanguage(this.value);
+  });
+});
+
 ;(function () {
   'use strict';
 
@@ -28,8 +43,8 @@ under the License.
     if (!language) return;
     if (language === "") return;
 
-    $(".lang-selector a").removeClass('active');
-    $(".lang-selector a[data-language-name='" + language + "']").addClass('active');
+    // $(".lang-selector a").removeClass('active');
+    // $(".lang-selector a[data-language-name='" + language + "']").addClass('active');
     for (var i=0; i < languages.length; i++) {
       $(".highlight.tab-" + languages[i]).hide();
       $(".lang-specific." + languages[i]).hide();
