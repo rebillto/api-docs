@@ -69,14 +69,4 @@ Rebill uses a token Bearer to allow access to the API. You can access to the API
 
 Looking for any specific Endpoint? Write us with your request to [support@rebill.to](mailto:support@rebill.to).
 
-<blockquote class="plaintext light">
-<p>ENDPOINTS</p>
-</blockquote>
-<div class="highlight light">
-  <pre class="highlight plaintext light endpoints" style="">
-    <a href="#"><div class="method"><span class="get">GET</span></div><div class="endpoint">/auth/:id</div></a>
-    <a href="#"><div class="method"><span class="post">POST</span></div><div class="endpoint">/auth/:id</div></a>
-    <a href="#"><div class="method"><span class="put">PUT</span></div><div class="endpoint">/auth/:id</div></a>
-    <a href="#"><div class="method"><span class="delete">DELETE</span></div><div class="endpoint">/auth/:id</div></a>
-  </pre>
-</div>
+<div class="divider"></div>

@@ -1,11 +1,11 @@
 #Authentication
 
 
-<blockquote class="plaintext">
+<blockquote class="plaintext light">
 <p>ENDPOINTS</p>
 </blockquote>
-<div class="highlight">
-  <pre class="highlight plaintext endpoints" style="">
+<div class="highlight light">
+  <pre class="highlight plaintext light endpoints" style="">
     <a href="#"><div class="method"><span class="get">GET</span></div><div class="endpoint">/auth/:id</div></a>
     <a href="#"><div class="method"><span class="post">POST</span></div><div class="endpoint">/auth/:id</div></a>
     <a href="#"><div class="method"><span class="put">PUT</span></div><div class="endpoint">/auth/:id</div></a>

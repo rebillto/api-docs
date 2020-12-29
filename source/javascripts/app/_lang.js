@@ -49,8 +49,6 @@ under the License.
   $(document).ready(function(){
     var $button = $('#language-switcher').clone().show();
     $('blockquote').append($button);
-    $('#language-switcher select>optionoption[value="shell"]').click();
-    $('.lang-switcher-select option[value="shell"]').trigger("click");
     $('.lang-switcher-select').change(function() {
       $('.lang-switcher-select option').removeAttr("selected");
       $('.lang-switcher-select option').removeAttr("disabled");
