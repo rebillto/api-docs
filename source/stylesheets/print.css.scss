@@ -125,6 +125,7 @@ body {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     line-height: 1.6;
+    margin-right: 5vw;
   }
 
   aside:before {
@@ -143,5 +144,11 @@ body {
 
   aside.success:before {
     @extend %icon-ok-sign;
+  }
+}
+
+.copy-clipboard {
+  @media print {
+    display: none
   }
 }

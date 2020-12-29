@@ -1,5 +1,7 @@
 #Authentication
 
+> To authorize, use this code:
+
 ```shell
 CURL Request Example
 
@@ -124,9 +126,9 @@ func main() {
 }
 ```
 
-```json
-JSON Response Example
+> RESPONSE
 
+```json
 {
     "success": true,
     "response": {
@@ -139,7 +141,9 @@ JSON Response Example
     }
 }
 ```
-
+<aside class="notice">
+You must replace <code>meowmeowmeow</code> with your personal API key.
+</aside>
 
 The authentication process is through a token Bearer. In order to obtain a token, you shall use your username (email) and password.
 Note that the `username` and `password` shall be sent using `Basic Authentication`. This means that both components shall be sent in base64 format.
