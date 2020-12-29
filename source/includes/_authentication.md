@@ -176,3 +176,5 @@ Attribute | Content | Always Present | Description
 --------- | ----------- | ----------- | -----------
 `success` | boolean | Yes | Returns `true` if the performed action was success, otherwise `false`.
 `response` | object | Yes | Contains an object with the result of the performed action if success. If an error ocurred, the response object will not exist. Check the error response format.
+
+<div class="divider"></div>

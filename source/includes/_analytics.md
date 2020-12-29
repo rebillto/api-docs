@@ -47,3 +47,5 @@ Authorization | `Basic base64_hash` | Yes | Your username and password in base64
 Response Example
 
 ```
+
+<div class="divider"></div>

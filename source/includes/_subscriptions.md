@@ -281,3 +281,5 @@ Parameter | Description
 --------- | -----------
 :type | Use `preapprovalid` (referencing to the mercadopago preapprovalid) or `subscriptionID`.
 ID | The ID of the subscription to retrieve.
+
+<div class="divider"></div>

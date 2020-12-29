@@ -46,7 +46,7 @@ $search-notice-bg: #c97a7e !default;
 ////////////////////
 $main-text: #4f566b !default; // main content text color
 $nav-text: #8792a2 !default;
-$nav-active-text: #57a6ec !default;
+$nav-active-text: #1e79ca !default;
 $nav-active-parent-text: #8792a2 !default; // parent links of the current section
 $lang-select-text: #fff !default; // color of unselected language tab text
 $lang-select-active-text: #fff !default; // color of selected language tab text
@@ -55,7 +55,7 @@ $lang-select-pressed-text: #fff !default; // color of language tab text when mou
 
 // SIZES
 ////////////////////
-$nav-width: 220px !default; // width of the navbar
+$nav-width: 250px !default; // width of the navbar
 $examples-width: 35vw !default; // portion of the screen taken up by code examples
 $logo-margin: 0px !default; // margin below logo
 $main-padding: 28px !default; // padding to left and right of content & examples

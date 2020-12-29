@@ -769,3 +769,5 @@ Header | Content
 --------- | -----------
 :type | Find by `paymentID` or `subscriptionID`.
 :id | ID of the payment to retrieve.
+
+<div class="divider"></div>

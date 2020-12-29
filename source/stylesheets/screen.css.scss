@@ -156,7 +156,7 @@ html, body {
     }
 
     a {
-      color: #57a6ec;
+      color: #1e79ca;
       text-decoration: none;
 
       &:hover {
@@ -356,6 +356,7 @@ html, body {
 // This is all the stuff with the light background in the left half of the page
 
 .content {
+  padding: 3vw;
   // fixes webkit rendering bug for some: see #538
   -webkit-transform: translateZ(0);
   // to place content above the dark box
@@ -553,15 +554,17 @@ html, body {
 // This is all the stuff that appears in the right half of the page
 
 .content {
-  padding: 5vw;
-
+  .div {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
   &>div.highlight {
     clear:none;
     padding-left: 6vw;
   }
   
   a, a:visited {
-    color: #57a6ec;
+    color: #1e79ca;
     font-weight: 500;
   }
   
@@ -585,7 +588,7 @@ html, body {
     &>p { margin: 0; }
 
     a {
-      color: #57a6ec;
+      color: #1e79ca;
       text-decoration: none;
       border-bottom: dashed 1px #ccc;
     }
@@ -784,6 +787,8 @@ blockquote.plaintext > .lang-switcher {
 }
 
 .endpoints {
+  padding: 15px 0px 0px 0px !important;
+
   a {
     border-bottom: none !important;
     font-size: 13px;
@@ -844,4 +849,9 @@ blockquote.plaintext > .lang-switcher {
     line-height: 26px;
     color: #697386;
   }
+}
+
+.divider {
+  width: 100%;
+  border-top: 1px solid #e3e8ee;
 }

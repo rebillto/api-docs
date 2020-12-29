@@ -37,3 +37,5 @@ Parameter | Description
 --------- | -----------
 :type | Retrieve the Plan by `planID` or `mpPlanID`.
 :id | ID of the Plan to Retrieve.
+
+<div class="divider"></div>

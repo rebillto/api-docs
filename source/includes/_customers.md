@@ -808,3 +808,5 @@ Authorization | JWT eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwicGFzc3dvcmQiOiIkMmEkMTAkcjd
 Parameter | Description
 --------- | -----------
 :email | Email of the customer to delete.
+
+<div class="divider"></div>
