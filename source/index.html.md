@@ -46,6 +46,6 @@ Welcome to the Rebill API. You can use our API to access Rebill API endpoints, w
 
 We have language bindings in Curl, Ruby, Python, and Javascript. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
-Rebill uses a token Bearer to allow access to the API. You can access to the APIs using your own personal account, and asking for special access to the other functionalities [by email](mailto:developers@rebill.to).
+Rebill uses a token Bearer to allow access to the API. You can access to the APIs using your own personal account, and asking for special access to the other functionalities [by email](mailto:support@rebill.to).
 
-Looking for any specific Endpoint? Write us with your request to [developers@rebill.to](mailto:developers@rebill.to).
+Looking for any specific Endpoint? Write us with your request to [support@rebill.to](mailto:support@rebill.to).

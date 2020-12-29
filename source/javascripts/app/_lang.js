@@ -16,20 +16,6 @@ License for the specific language governing permissions and limitations
 under the License.
 */
 
-$(document).ready(function(){
-  var $button = $('#language-switcher').clone().show();
-  $('blockquote').append($button);
-  $('#language-switcher select>optionoption[value="shell"]').click();
-  $('.lang-switcher-select option[value="shell"]').trigger("click");
-  $('.lang-switcher-select').change(function() {
-    $('.lang-switcher-select option').removeAttr("selected");
-    $('.lang-switcher-select option').removeAttr("disabled");
-    $('.lang-switcher-select option[value="'+ this.value +'"]').attr("selected", "selected");
-    $('.lang-switcher-select option[value="'+ this.value +'"]').attr("disabled", "disabled");
-    activateLanguage(this.value);
-  });
-});
-
 ;(function () {
   'use strict';
 
@@ -60,6 +46,20 @@ $(document).ready(function(){
     }
   }
 
+  $(document).ready(function(){
+    var $button = $('#language-switcher').clone().show();
+    $('blockquote').append($button);
+    $('#language-switcher select>optionoption[value="shell"]').click();
+    $('.lang-switcher-select option[value="shell"]').trigger("click");
+    $('.lang-switcher-select').change(function() {
+      $('.lang-switcher-select option').removeAttr("selected");
+      $('.lang-switcher-select option').removeAttr("disabled");
+      $('.lang-switcher-select option[value="'+ this.value +'"]').attr("selected", "selected");
+      $('.lang-switcher-select option[value="'+ this.value +'"]').attr("disabled", "disabled");
+      activateLanguage(this.value);
+    });
+  });
+  
   // parseURL and stringifyURL are from https://github.com/sindresorhus/query-string
   // MIT licensed
   // https://github.com/sindresorhus/query-string/blob/7bee64c16f2da1a326579e96977b9227bf6da9e6/license
