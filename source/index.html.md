@@ -43,12 +43,12 @@ code_clipboard: true
 # Introduction
 
 <div class="right-block">
-  <h1>Just getting started?</h1>
+  <span class="title">Just getting started?</span>
   <p>Check out our <a href="https://support.rebill.to" target="_blank" rel="noopener noreferrer" class="docs-link">development quickstart</a> guide.</p>
 </div>
 
 <div class="right-block">
-  <h1>NOT A DEVELOPER?</h1>
+  <span class="title">NOT A DEVELOPER?</span>
   <p>Use apps or get a quote from <a href="https://support.rebill.to" target="_blank" rel="noopener noreferrer" class="docs-link">our partners</a> to get started with Rebill. You may also <a href="mailto:support@rebill.to"> contact us</a> to get personalized assistance.</p>
 </div>
 
